@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Hub — AI Engineer Learning Hub</title>
+  <link rel="stylesheet" href="styles/main.css?v=pro-flagship-v3">
+  <script src="data/bundle.js?v=pro-flagship-v3"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="nav" aria-label="Main navigation" style="display:none;"></nav>
+
+  <main id="main">
+    <div class="container page" style="max-width: var(--content-max-width);">
+      <header class="page-header flex justify-between items-start flex-wrap gap-3">
+        <div>
+          <h1>Video Masterclass Hub</h1>
+          <p class="subtitle">190 curated videos across all 38 skills. Privacy-friendly embedded player, timestamped notes, and verified links.</p>
+        </div>
+        <div class="flex gap-2">
+          <a href="how-to-watch.html" class="btn btn-secondary btn-sm">Video Study Guide →</a>
+        </div>
+      </header>
+
+      <!-- Video Player Facade Modal -->
+      <div id="video-player-modal" class="modal-backdrop">
+        <div class="command-palette-dialog" style="max-width: 800px; padding: 0;" role="dialog" aria-modal="true" aria-label="Embedded Player">
+          <div class="flex justify-between items-center" style="padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--border);">
+            <div class="fw-600 text-sm" id="player-modal-title">Video Player</div>
+            <button id="close-player-btn" class="btn-icon btn-xs" aria-label="Close Player">
+              <svg class="icon icon-sm"><use href="#icon-x"></use></svg>
+            </button>
+          </div>
+          <div id="player-iframe-container" style="position: relative; width: 100%; padding-bottom: 56.25%; background: #000;">
+            <!-- Iframe injected on demand -->
+          </div>
+          <div style="padding: var(--space-4); background: var(--bg-subtle);">
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-xs text-muted" id="player-modal-channel">Channel</span>
+              <a href="#" id="player-modal-external" target="_blank" rel="noopener" class="btn btn-secondary btn-xs">Open on YouTube ↗</a>
+            </div>
+            <p class="text-xs text-muted" id="player-modal-why"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls: Search, Skill filter, Category filter, Level filter -->
+      <div class="card mb-6" style="padding: var(--space-3) var(--space-4);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--space-3); align-items: center;">
+          <input type="search" id="video-search-input" class="input" placeholder="Search title, channel, skill…" aria-label="Search videos">
+          <select id="video-skill-filter" class="select" aria-label="Filter by skill">
+            <option value="">All Skills (38)</option>
+          </select>
+          <select id="video-category-filter" class="select" aria-label="Filter by category">
+            <option value="">All Categories</option>
+            <option value="Start here">Start here</option>
+            <option value="Core tutorials">Core tutorials</option>
+            <option value="Deep dives">Deep dives</option>
+            <option value="Official talks">Official talks</option>
+            <option value="Optional extras">Optional extras</option>
+          </select>
+          <select id="video-view-mode" class="select" aria-label="View mode">
+            <option value="grid">Grid View</option>
+            <option value="list">Compact List View</option>
+          </select>
+        </div>
+        <div class="flex justify-between items-center mt-3 pt-2 text-xs text-muted" style="border-top: 1px solid var(--border);">
+          <span id="video-count-label">Showing all videos</span>
+          <button id="video-clear-filters" class="btn btn-ghost btn-xs">Reset Filters</button>
+        </div>
+      </div>
+
+      <!-- Video Feed Container -->
+      <div id="videos-container" class="video-grid" role="list">
+        <div class="empty-state"><div class="empty-icon">⏳</div><p>Loading curated video masterclasses…</p></div>
+      </div>
+
+    </div>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/shell.js"></script>
+  <script type="module" src="js/videos.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Today's Plan & Focus Studio — AI Engineer Learning Hub</title>
+  <link rel="stylesheet" href="styles/main.css?v=pro-flagship-v3">
+  <script src="data/bundle.js?v=pro-flagship-v3"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="nav" aria-label="Main navigation" style="display:none;"></nav>
+
+  <main id="main">
+    <div class="container page" style="max-width: var(--content-max-width);">
+      <header class="page-header flex justify-between items-start flex-wrap gap-3">
+        <div>
+          <h1>Today's Daily Plan & Focus Studio</h1>
+          <p class="subtitle">Structured 2-hour daily routine (15m Learn, 60m Build, 30m Verify, 15m Record) with countdown timer, spaced repetition alerts, and practice targets.</p>
+        </div>
+      </header>
+
+      <!-- Focus Studio Timer Section -->
+      <section class="card mb-6" id="timer" style="border-left: 4px solid var(--accent);">
+        <div class="flex justify-between items-center mb-3 flex-wrap gap-2">
+          <div>
+            <span class="badge badge-accent">Interactive Focus Studio</span>
+            <h2 style="font-size: var(--text-lg); margin-top: 4px;" id="current-block-name">Session Block: 15m Learn Concepts</h2>
+          </div>
+          <div class="flex items-center gap-2">
+            <button id="timer-sound-toggle" class="btn btn-secondary btn-xs" aria-label="Toggle completion sound">
+              Chime: Off
+            </button>
+          </div>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:var(--space-6); flex-wrap:wrap; margin: var(--space-4) 0;">
+          <div style="font-size: 3.25rem; font-weight: 700; font-family: var(--font-mono); letter-spacing: -0.02em;" id="timer-display">
+            15:00
+          </div>
+          <div class="flex gap-2 items-center">
+            <button id="timer-start-btn" class="btn btn-primary btn-sm">Start Block ▷</button>
+            <button id="timer-pause-btn" class="btn btn-secondary btn-sm" disabled>Pause ⏸</button>
+            <button id="timer-skip-btn" class="btn btn-ghost btn-sm">Skip Block ⏭</button>
+            <button id="timer-reset-btn" class="btn btn-ghost btn-sm">Reset ↺</button>
+          </div>
+        </div>
+
+        <!-- 4 Step Stage Progress -->
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;">
+          <div class="card card-compact timer-stage-pill active" id="stage-learn" style="text-align:center;">
+            <div class="text-xs fw-700">1. Learn (15m)</div>
+            <div class="text-xs text-subtle">Read docs / video</div>
+          </div>
+          <div class="card card-compact timer-stage-pill" id="stage-build" style="text-align:center;">
+            <div class="text-xs fw-700">2. Build (60m)</div>
+            <div class="text-xs text-subtle">Hands-on code</div>
+          </div>
+          <div class="card card-compact timer-stage-pill" id="stage-verify" style="text-align:center;">
+            <div class="text-xs fw-700">3. Verify (30m)</div>
+            <div class="text-xs text-subtle">Pytest / edge cases</div>
+          </div>
+          <div class="card card-compact timer-stage-pill" id="stage-record" style="text-align:center;">
+            <div class="text-xs fw-700">4. Record (15m)</div>
+            <div class="text-xs text-subtle">Notes & commit</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Date Configuration Bar -->
+      <div class="card mb-6 flex justify-between items-center gap-3 flex-wrap">
+        <div>
+          <span class="text-sm fw-600">Active Study Phase Start Date:</span>
+          <span id="display-start-date" class="text-sm text-accent fw-600 ml-2">Not set</span>
+        </div>
+        <div class="flex gap-2 items-center">
+          <input type="date" id="today-start-input" class="input" style="width:160px; padding:0.25rem 0.5rem; font-size:0.85rem;">
+          <button id="save-today-start" class="btn btn-secondary btn-sm">Update Date</button>
+        </div>
+      </div>
+
+      <!-- Spaced Repetition Reminders (1, 7, 30 days) -->
+      <section id="revisions" class="mb-6">
+        <h3 class="mb-3">Spaced Repetition Recall Due Today</h3>
+        <div id="revisions-container">
+          <div class="card card-sm text-sm text-muted">
+            No recall review due today. When you mark skills as <strong>Proven</strong>, spaced recall reminders at 1, 7, and 30 days appear here.
+          </div>
+        </div>
+      </section>
+
+      <!-- Today's 2-Hour Task Card -->
+      <section class="mb-6">
+        <h3 class="mb-3">Today's Concrete Task</h3>
+        <div id="today-task-card">
+          <div class="empty-state"><div class="empty-icon">⏳</div><p>Calculating today's task…</p></div>
+        </div>
+      </section>
+
+      <!-- Recommended Videos For Today -->
+      <section class="mb-6">
+        <h3 class="mb-3">Watch Today (Strict 20-minute limit)</h3>
+        <p class="text-xs text-muted mb-3">Watch at 1.25x-1.5x speed. Pause to build. Stop studying after 20 minutes and code.</p>
+        <div id="today-videos" class="video-grid"></div>
+      </section>
+
+      <!-- Recommended Exercises For Today -->
+      <section class="mb-6">
+        <h3 class="mb-3">Hands-on Practice For Today</h3>
+        <div id="today-exercises"></div>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/shell.js"></script>
+  <script type="module" src="js/today.js"></script>
+</body>
+</html>

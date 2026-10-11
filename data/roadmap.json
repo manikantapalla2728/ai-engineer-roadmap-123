@@ -1,0 +1,1283 @@
+{
+  "studyStartDate": null,
+  "phases": [
+    {
+      "id": "deep-learning",
+      "label": "Deep Learning",
+      "durationDays": 7
+    },
+    {
+      "id": "exams",
+      "label": "Exams",
+      "durationDays": 31
+    },
+    {
+      "id": "16-weeks",
+      "label": "16 Weeks Active",
+      "durationDays": 112
+    },
+    {
+      "id": "data-engineering",
+      "label": "Data Engineering",
+      "durationDays": null
+    }
+  ],
+  "months": [
+    {
+      "id": 1,
+      "title": "AI tools, GenAI, prompting",
+      "weeks": [
+        {
+          "id": 1,
+          "title": "AI Tools & Ecosystem",
+          "goal": "Master modern AI coding & assistant tools, benchmark models, and establish a disciplined AI-augmented development workflow.",
+          "concepts": [
+            "Assistant taxonomy: Chatbots vs Inline completions vs Autonomous coding agents",
+            "Frontier model landscape: ChatGPT (OpenAI), Claude (Anthropic), Gemini (Google)",
+            "Research and Multimodal tools: Perplexity, NotebookLM, Claude artifacts",
+            "Verification protocols: spotting plausible hallucinations in syntax and API contracts",
+            "Personal developer setup and extension configuration"
+          ],
+          "deliverable": "Personal AI Tool Comparison Matrix & Verification Protocol (Markdown)",
+          "milestone": "Evaluated 3 frontier models across 5 typical software tasks with reproducibility notes.",
+          "dsa": {
+            "sessions": 3,
+            "minutesPerSession": 40,
+            "focus": "Arrays & Hashing (Two Sum, Valid Anagram, Prefix Sums)"
+          },
+          "days": [
+            {
+              "day": 1,
+              "title": "Assistant Categories & Tool Mapping",
+              "what": "Analyze the landscape of AI tools across 3 categories: general conversational interfaces, inline autocomplete (Copilot/Supermaven), and agentic editors (Cursor/Windsurf). Map where each fits in your daily cycle.",
+              "produce": "docs/tools_taxonomy.md classifying 6 tools with strengths, latency, and ideal use-cases.",
+              "check": "Verify all 3 categories have at least 2 distinct tools documented with clear tradeoffs.",
+              "duration_min": 120
+            },
+            {
+              "day": 2,
+              "title": "Model Shootout: ChatGPT vs Claude vs Gemini",
+              "what": "Run identical test prompts across ChatGPT (GPT-4o), Claude 3.5 Sonnet, and Gemini 1.5 Pro: (1) LeetCode medium explanation, (2) FastAPI schema refactor, (3) edge-case bug hunt.",
+              "produce": "benchmarks/frontier_shootout.md with prompts, responses, accuracy, speed, and critique.",
+              "check": "Verify side-by-side comparison matrix scored across correctness, reasoning depth, and conciseness.",
+              "duration_min": 120
+            },
+            {
+              "day": 3,
+              "title": "Multimodal & Research Assistants",
+              "what": "Test multimodal capabilities and deep research workflows. Upload a system architecture diagram to Gemini/Claude and ask for failure mode analysis; query Perplexity/NotebookLM on an ML paper.",
+              "produce": "docs/multimodal_research_notes.md containing extracted architectures and synthesized summaries.",
+              "check": "Confirm multimodal tool correctly identifies components and data flow from image input.",
+              "duration_min": 120
+            },
+            {
+              "day": 4,
+              "title": "Hallucination Defense & Output Verification",
+              "what": "Formulate a systematic checklist to verify AI outputs: checking documentation links, validating library version compatibility, verifying imports exist, and dry-running code in isolated REPLs.",
+              "produce": "checklists/verification_protocol.md with a 5-step gate before accepting generated code.",
+              "check": "Run 2 deliberately ambiguous prompts, catch the hallucinations using the checklist.",
+              "duration_min": 120
+            },
+            {
+              "day": 5,
+              "title": "Personal AI Developer Environment Setup",
+              "what": "Configure your IDE (VS Code / Cursor / Windsurf) with optimal AI assistant configurations, rules files (.cursorrules or Copilot instructions), and keyboard shortcuts for rapid toggle.",
+              "produce": "A configured .cursorrules / AGY instructions file and keybindings cheat sheet.",
+              "check": "Trigger completion and generation via keyboard shortcuts; inspect context inclusion.",
+              "duration_min": 120
+            },
+            {
+              "day": 6,
+              "title": "Draft Personal AI-Tool Guide",
+              "what": "Consolidate the week's benchmark data, verification steps, and editor setups into an authoritative guide for college peers transitioning into AI engineering.",
+              "produce": "AI_TOOLS_GUIDE.md comprehensive document ready for GitHub.",
+              "check": "Peer review the document against clarity, actionable advice, and lack of marketing fluff.",
+              "duration_min": 120
+            },
+            {
+              "day": 7,
+              "title": "Catch-up, Review and Consolidate",
+              "what": "Consolidate Week 1 learnings, review your AI tools guide, clean up markdown notes, and complete DSA practice session 3.",
+              "produce": "Weekly reflection log entry in PROGRESS.md and solved DSA problems in LeetCode repository.",
+              "check": "Ensure AI_TOOLS_GUIDE.md is committed and DSA problems have passing test cases.",
+              "duration_min": 120
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Prompt Engineering as Code",
+          "goal": "Master prompt design patterns, few-shot conditioning, structured decomposition, and defensive prompt engineering against injection.",
+          "concepts": [
+            "Instruction hierarchy and system prompt design",
+            "Few-shot exemplars and in-context learning mechanics",
+            "Chain-of-thought, scratchpads, and task decomposition",
+            "Iterative prompt debugging and metric tracking",
+            "Prompt injection fundamentals and containment barriers"
+          ],
+          "deliverable": "Production Prompt Library with 10+ engineered prompts and test suites",
+          "milestone": "A structured repository of tested prompts with markdown evaluation benchmarks.",
+          "dsa": {
+            "sessions": 3,
+            "minutesPerSession": 40,
+            "focus": "Two Pointers & Sliding Window (Valid Palindrome, Container With Most Water, 3Sum)"
+          },
+          "days": [
+            {
+              "day": 1,
+              "title": "Instruction Clarity & Role Specification",
+              "what": "Deconstruct prompt anatomy: Role, Goal, Context, Constraints, and Output Format. Practice rewriting vague prompts into rigorous, deterministic system instructions.",
+              "produce": "prompts/system_prompt_framework.md with 4 template variations for technical tasks.",
+              "check": "Test the templates on 3 edge-case inputs; confirm formatting constraints hold.",
+              "duration_min": 120
+            },
+            {
+              "day": 2,
+              "title": "Few-Shot In-Context Conditioning",
+              "what": "Implement few-shot learning for complex data extraction and classification. Test zero-shot vs 1-shot vs 3-shot performance on unstructured resume parsing.",
+              "produce": "prompts/few_shot_extractor.json containing 3 high-variance examples and evaluation diffs.",
+              "check": "Confirm that 3-shot consistently resolves boundary edge cases missed by zero-shot.",
+              "duration_min": 120
+            },
+            {
+              "day": 3,
+              "title": "Decomposition & Chain-of-Thought (CoT)",
+              "what": "Engineer multi-step reasoning prompts: breaking a monolithic requirement into intermediate reasoning steps, planning scratchpads, and final synthesis.",
+              "produce": "prompts/cot_planner.md with scratchpad tags (<thinking>, <plan>, <output>).",
+              "check": "Verify prompt on a multi-step logic problem; verify model adheres to reasoning blocks.",
+              "duration_min": 120
+            },
+            {
+              "day": 4,
+              "title": "Iterative Prompt Calibration & Eval Set",
+              "what": "Build a test matrix of 10 challenging test inputs. Refine prompts iteratively across 3 versions, tracking pass/fail rates for schema compliance.",
+              "produce": "prompts/eval_matrix.csv tracking prompt version v1, v2, v3 against test inputs.",
+              "check": "Confirm v3 prompt achieves at least 9/10 pass rate on strict schema compliance.",
+              "duration_min": 120
+            },
+            {
+              "day": 5,
+              "title": "Prompt Injection Basics & Guardrails",
+              "what": "Study direct injection and indirect injection via untrusted user inputs. Test delimiter defensive strategies (XML tags, triple quotes, validation guards).",
+              "produce": "prompts/injection_defense_suite.md demonstrating 5 attack payloads and defensive boundaries.",
+              "check": "Attempt injection payloads against delimited prompt; verify model refuses unauthorized override.",
+              "duration_min": 120
+            },
+            {
+              "day": 6,
+              "title": "Curating the Prompt Library",
+              "what": "Package your 10+ battle-tested prompts into a documented, version-controlled library covering: Planning, Code Explanation, Systematic Debugging, Security Audit, and Architecture Review.",
+              "produce": "prompt_library/ containing 10 structured prompts with documentation and sample outputs.",
+              "check": "Verify all 10 prompts have purpose, variables, model settings (temp, top_p), and expected outputs.",
+              "duration_min": 120
+            },
+            {
+              "day": 7,
+              "title": "Catch-up, Review and Consolidate",
+              "what": "Consolidate Week 2 deliverables, review prompt performance, add unit tests where applicable, and complete DSA session 3.",
+              "produce": "Updated prompt library repository and DSA session log.",
+              "check": "Verify prompt library passes peer clarity review and commit changes to git.",
+              "duration_min": 120
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "GenAI Fundamentals & API Mechanics",
+          "goal": "Understand tokens, context windows, sampling parameters, embeddings, hallucinations, and latency/cost trade-offs.",
+          "concepts": [
+            "BPE Tokenization mechanics and token-to-word arithmetic",
+            "Context window dynamics, attention degradation, and needle-in-haystack",
+            "Sampling hyperparameters: Temperature, Top-p, Top-k, Frequency/Presence penalty",
+            "Vector embeddings: mathematical concepts, cosine similarity, dimensional spaces",
+            "Cost and latency calculations across model tiers"
+          ],
+          "deliverable": "Comprehensive Technical Explainer Doc: The Engineering Mechanics of LLMs",
+          "milestone": "Demonstrated calculations of cost, token budgets, and parameter tunings for real applications.",
+          "dsa": {
+            "sessions": 3,
+            "minutesPerSession": 40,
+            "focus": "Stack & Sliding Window (Min Stack, Daily Temperatures, Longest Substring Without Repeating Characters)"
+          },
+          "days": [
+            {
+              "day": 1,
+              "title": "Tokenization Mechanics & Token Cost",
+              "what": "Explore Byte Pair Encoding (BPE) using tiktoken. Measure token counts for code snippets, JSON payloads, and multilingual text. Calculate cost per 1M tokens across model families.",
+              "produce": "scripts/tokenize_test.py and docs/token_economics.md with cost formula calculators.",
+              "check": "Run script calculating exact token cost of an 8KB FastAPI codebase under GPT-4o and Claude Sonnet.",
+              "duration_min": 120
+            },
+            {
+              "day": 2,
+              "title": "Context Windows & Attention Degradation",
+              "what": "Study effective context windows. Analyze 'Lost in the Middle' phenomenon and needle-in-haystack test results. Design strategies to position critical system instructions.",
+              "produce": "docs/context_window_dynamics.md documenting context degradation and optimization rules.",
+              "check": "Diagram optimal prompt layout: system rules at perimeter, reference data in middle.",
+              "duration_min": 120
+            },
+            {
+              "day": 3,
+              "title": "Generation Settings & Sampling Experiment",
+              "what": "Build an experiment script varying temperature (0.0 to 1.2) and top_p. Measure output determinism, creativity, and schema violation rates on a structured extraction task.",
+              "produce": "experiments/temperature_bench.py and data/sampling_results.json.",
+              "check": "Confirm temperature=0.0 yields identical outputs across 5 identical requests; temp=1.0 diverges.",
+              "duration_min": 120
+            },
+            {
+              "day": 4,
+              "title": "Hallucinations: Root Causes & Mitigations",
+              "what": "Categorize hallucinations: fact fabrication, API hallucination, reasoning breakdown. Document architectural mitigations (RAG, tool verification, strict decoding, grounding).",
+              "produce": "docs/hallucination_taxonomy.md with 4 real failure examples and architectural fixes.",
+              "check": "Review each failure example to ensure the proposed mitigation addresses the specific root cause.",
+              "duration_min": 120
+            },
+            {
+              "day": 5,
+              "title": "Embeddings & Semantic Similarity Fundamentals",
+              "what": "Study vector embeddings. Calculate dot product and cosine similarity manually in Python on sample 3D vectors before scaling to text-embedding-3-small.",
+              "produce": "scripts/embedding_math.py computing cosine similarity between 5 sentence pairs.",
+              "check": "Verify synonymous sentences score > 0.85 cosine similarity while unrelated score < 0.3.",
+              "duration_min": 120
+            },
+            {
+              "day": 6,
+              "title": "Synthesis & Technical Explainer Doc",
+              "what": "Synthesize tokenomics, context limits, sampling parameters, embeddings, and trade-off decisions into a single polished technical reference document.",
+              "produce": "docs/LLM_ENGINEERING_MECHANICS.md ready for technical interview preparation.",
+              "check": "Review document covers all 5 core topics with mathematical examples and diagrams.",
+              "duration_min": 120
+            },
+            {
+              "day": 7,
+              "title": "Catch-up, Review and Consolidate",
+              "what": "Consolidate Week 3 scripts, ensure clean git commits, review math concepts, and complete DSA session 3.",
+              "produce": "Committed scripts, updated PROGRESS.md, and DSA solutions.",
+              "check": "Ensure scripts/tokenize_test.py runs cleanly without dependency warnings.",
+              "duration_min": 120
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "First Production LLM App (FastAPI + Streamlit)",
+          "goal": "Build an end-to-end, type-safe LLM application with model APIs, Pydantic structured outputs, FastAPI backend, Streamlit frontend, and automated tests.",
+          "concepts": [
+            "OpenAI / Anthropic SDK client initialization and async calls",
+            "Pydantic schema enforcement and structured JSON output mode",
+            "FastAPI endpoint design: /chat, request/response models, streaming",
+            "Streamlit interactive chat UI with stateful conversation memory",
+            "Automated testing with pytest and mock model responses"
+          ],
+          "deliverable": "Full-stack AI app: FastAPI service + Streamlit interface with 3+ pytest tests",
+          "milestone": "Working full-stack LLM application with type-safe schema output and 100% passing tests.",
+          "dsa": {
+            "sessions": 3,
+            "minutesPerSession": 40,
+            "focus": "Binary Search (Search in Rotated Sorted Array, Find Minimum in Rotated Sorted Array)"
+          },
+          "days": [
+            {
+              "day": 1,
+              "title": "SDK Setup & Async Model Invocations",
+              "what": "Set up a clean virtual environment. Initialize official client SDK with secure environment variable loading. Write async completion wrapper with retries and exponential backoff.",
+              "produce": "backend/llm_client.py with robust error handling and timeout configurations.",
+              "check": "Run smoke test invoking model asynchronously; verify graceful handling of invalid API key.",
+              "duration_min": 120
+            },
+            {
+              "day": 2,
+              "title": "Pydantic Structured Outputs",
+              "what": "Leverage native structured output capabilities using Pydantic models. Build an information extraction schema (AnalysisResult with confidence scores, keywords, action items).",
+              "produce": "backend/schemas.py with strictly validated Pydantic models for structured output.",
+              "check": "Pass 5 varied text snippets; verify 100% parse rate directly into Pydantic instances.",
+              "duration_min": 120
+            },
+            {
+              "day": 3,
+              "title": "FastAPI Service Architecture",
+              "what": "Create a FastAPI app with POST /api/chat and POST /api/analyze endpoints. Add CORS middleware, request logging, and custom exception handlers.",
+              "produce": "backend/main.py exposing clean REST endpoints documented with Swagger UI.",
+              "check": "Open http://localhost:8000/docs; execute curl requests and inspect 200 OK responses.",
+              "duration_min": 120
+            },
+            {
+              "day": 4,
+              "title": "Streamlit User Interface",
+              "what": "Build an intuitive Streamlit frontend that consumes the FastAPI backend. Implement st.chat_message, st.session_state for multi-turn history, and sidebar model settings.",
+              "produce": "frontend/app.py displaying full conversational UI with structured analysis cards.",
+              "check": "Launch Streamlit, send 3 sequential messages, confirm UI retains chat history.",
+              "duration_min": 120
+            },
+            {
+              "day": 5,
+              "title": "Automated Testing with pytest & Mocking",
+              "what": "Write automated test suite using pytest and HTTPX. Mock the LLM provider responses using unittest.mock to ensure fast, deterministic CI test runs without token costs.",
+              "produce": "tests/test_api.py with 4+ tests covering schema validation, mock responses, and errors.",
+              "check": "Run pytest -v; verify all tests pass in < 2 seconds without external network calls.",
+              "duration_min": 120
+            },
+            {
+              "day": 6,
+              "title": "Flagship Project Month 1 Integration",
+              "what": "Connect this week's code to the flagship Personal AI Engineering Assistant (Stage 1). Ensure read-only guardrails, proper .env.example, and comprehensive README.",
+              "produce": "Completed Stage 1 of flagship project in repository with clean git commit history.",
+              "check": "Clone repo into fresh directory and verify setup instructions work end-to-end.",
+              "duration_min": 120
+            },
+            {
+              "day": 7,
+              "title": "Catch-up, Review and Consolidate",
+              "what": "Review Month 1 accomplishments across AI tools, prompting, fundamentals, and app building. Complete DSA session 3 and plan Month 2.",
+              "produce": "Month 1 review milestone check in competency.html and updated git repo.",
+              "check": "Verify all Month 1 tasks in roadmap.html are checked and tests continue to pass.",
+              "duration_min": 120
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "AI-assisted engineering",
+      "weeks": [
+        {
+          "id": 5,
+          "title": "Coding Agents & AI Workflows",
+          "goal": "Master modern coding agent workflows (Cursor, Claude Code, Windsurf, Aider), context steering, and spec-driven code generation.",
+          "concepts": [
+            "Coding agent architectures: tool execution loops and file editing mechanics",
+            "Context management: @-symbols, project rules, indexing, and token budget limits",
+            "Spec-driven engineering: writing comprehensive specifications before agent code generation",
+            "Multi-file refactoring patterns and diff inspection techniques",
+            "Managing agent runaway loops and context drift"
+          ],
+          "deliverable": "AI-Assisted Engineering Workflow Specification & Case Study",
+          "milestone": "Engineered a non-trivial feature using an AI coding agent with 0 hand-written logic bugs.",
+          "dsa": {
+            "sessions": 3,
+            "minutesPerSession": 40,
+            "focus": "Linked Lists (Reverse Linked List, Merge Two Sorted Lists, Reorder List)"
+          },
+          "days": [
+            {
+              "day": 1,
+              "title": "Coding Agent Anatomy & Execution Loops",
+              "what": "Study how coding agents work under the hood: Read file -> Plan -> Generate edit -> Run lint/test -> Repair. Compare diff application approaches.",
+              "produce": "docs/agent_architecture_overview.md detailing agent tool interfaces.",
+              "check": "Map the exact sequence of tool calls an agent takes to resolve a multi-file bug.",
+              "duration_min": 120
+            },
+            {
+              "day": 2,
+              "title": "Context Steering & Repository Indexing",
+              "what": "Experiment with repository context steering. Benchmark agent accuracy when given no context vs specific file context (@file) vs complete architectural docs.",
+              "produce": "docs/context_steering_experiment.md documenting token waste vs accuracy gains.",
+              "check": "Demonstrate that pinpointed context reduces generation tokens by > 50% while improving accuracy.",
+              "duration_min": 120
+            },
+            {
+              "day": 3,
+              "title": "Spec-Driven Development (SDD) with AI",
+              "what": "Draft a rigorous specification (SPEC.md) for a new utility module (e.g., token bucket rate limiter). Feed only the SPEC into the agent and evaluate first-pass code.",
+              "produce": "specs/rate_limiter_spec.md and agent-generated src/rate_limiter.py.",
+              "check": "Verify the agent implementation adheres 100% to the specification parameters.",
+              "duration_min": 120
+            },
+            {
+              "day": 4,
+              "title": "Multi-File Refactoring Workflow",
+              "what": "Use an AI agent to execute a multi-file refactor across a codebase (e.g., changing synchronous database calls to async). Carefully inspect every diff block.",
+              "produce": "git diff review log highlighting 2 subtle agent hallucinations or regressions.",
+              "check": "Run automated test suite before and after refactor; verify all tests remain green.",
+              "duration_min": 120
+            },
+            {
+              "day": 5,
+              "title": "Defensive Agent Guardrails",
+              "what": "Formulate strict guardrails for coding agents: forbidding automatic terminal execution of untrusted commands, preventing edits to .env/secrets, and enforcing read-only boundaries.",
+              "produce": "agent_rules/rules.md and security policy configuration.",
+              "check": "Trigger simulated agent action attempting file write to sensitive paths; verify it halts.",
+              "duration_min": 120
+            },
+            {
+              "day": 6,
+              "title": "Case Study & Playbook Documentation",
+              "what": "Document your complete AI-assisted engineering methodology into a reusable team playbook: from task decomposition to diff inspection and commit message generation.",
+              "produce": "AI_ENGINEERING_PLAYBOOK.md in project documentation.",
+              "check": "Ensure playbook is actionable enough for a junior developer to adopt immediately.",
+              "duration_min": 120
+            },
+            {
+              "day": 7,
+              "title": "Catch-up, Review and Consolidate",
+              "what": "Review Week 5 learnings, clean up branch diffs, commit documentation, and complete DSA session 3.",
+              "produce": "Weekly reflection log and solved Linked List DSA problems.",
+              "check": "Verify git status is clean and documentation adheres to markdown standards.",
+              "duration_min": 120
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Requirements & Code Comprehension",
+          "goal": "Use LLMs to reverse-engineer legacy codebases, extract architecture diagrams, clarify ambiguous specifications, and produce actionable user stories.",
+          "concepts": [
+            "AST extraction and codebase topology mapping with LLMs",
+            "Translating legacy spaghetti code into clean architecture blueprints",
+            "Interactive requirements elicitation: finding edge cases and missing specs",
+            "Generating architectural sequence and ER diagrams with Mermaid.js",
+            "Synthesizing technical documentation for onboardings"
+          ],
+          "deliverable": "Annotated Codebase Architecture & Reverse-Engineering Dossier",
+          "milestone": "Reverse-engineered an open-source repository into a complete architecture spec and diagram set.",
+          "dsa": {
+            "sessions": 3,
+            "minutesPerSession": 40,
+            "focus": "Trees & Traversals (Invert Binary Tree, Maximum Depth of Binary Tree, Same Tree)"
+          },
+          "days": [
+            {
+              "day": 1,
+              "title": "Codebase Ingestion & Topology Mapping",
+              "what": "Select an unfamiliar open-source Python repository (e.g., HTTPX or Minisearch). Use an LLM with structured prompts to map out top-level entrypoints and data paths.",
+              "produce": "docs/architecture_overview.md detailing the core components and call graph.",
+              "check": "Verify mapped entry points match actual __init__.py and CLI definitions.",
+              "duration_min": 120
+            },
+            {
+              "day": 2,
+              "title": "Diagram Generation with Mermaid",
+              "what": "Prompt an LLM to generate Mermaid sequence diagrams for the primary request lifecycle, and class diagrams for core data entities.",
+              "produce": "docs/diagrams.md with rendered Mermaid sequence and class diagrams.",
+              "check": "Preview diagrams in markdown viewer; verify no syntax errors and logical flow holds.",
+              "duration_min": 120
+            },
+            {
+              "day": 3,
+              "title": "Legacy Code Deep-Dive & Edge-Case Identification",
+              "what": "Extract a 300-line complex function from the repo. Use an explanation prompt to explain every branch, edge-case behavior, and potential failure state.",
+              "produce": "docs/deep_dive_analysis.md annotating inputs, hidden invariants, and performance bottlenecks.",
+              "check": "Confirm that hidden invariants identified by the LLM match actual runtime assertions.",
+              "duration_min": 120
+            },
+            {
+              "day": 4,
+              "title": "Requirements Elicitation: The Grill-Me Method",
+              "what": "Simulate a client interview. Feed a vague feature request into an LLM and have it interrogate you across 8 dimensions (security, rate limits, latency, error states).",
+              "produce": "specs/feature_clarification_transcript.md and finalized unambiguous PRD.",
+              "check": "Confirm all 8 ambiguity dimensions are resolved in the final PRD.",
+              "duration_min": 120
+            },
+            {
+              "day": 5,
+              "title": "Flagship Project Month 2 Feature: Repo Explainer",
+              "what": "Add a new feature to your Personal AI Assistant: POST /api/explain-code that takes a code snippet or file tree and outputs a structured Markdown explanation.",
+              "produce": "backend/endpoints/explainer.py and corresponding Streamlit UI component.",
+              "check": "Submit 3 diverse code snippets into the UI; verify comprehensive structured explanation.",
+              "duration_min": 120
+            },
+            {
+              "day": 6,
+              "title": "Documentation Generation & Review",
+              "what": "Generate developer onboarding documentation for your flagship repo using your new explain endpoint. Review each generated paragraph for truthfulness.",
+              "produce": "docs/ONBOARDING.md with accurate installation and architectural guide.",
+              "check": "Verify zero hallucinated commands or nonexistent flags exist in the doc.",
+              "duration_min": 120
+            },
+            {
+              "day": 7,
+              "title": "Catch-up, Review and Consolidate",
+              "what": "Consolidate Week 6 code and documentation, review Tree traversal DSA concepts, and verify git commit history.",
+              "produce": "Weekly reflection log and solved Binary Tree DSA problems.",
+              "check": "Ensure flagship assistant explain endpoint has passing automated test.",
+              "duration_min": 120
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Systematic Debugging & Automated Testing",
+          "goal": "Master AI-assisted debugging, root-cause isolation, test-driven development (pytest, HTTPX), and mocking external dependencies.",
+          "concepts": [
+            "Root-cause analysis prompts and stack trace triage",
+            "Property-based and boundary-value test generation with AI",
+            "HTTPX async client testing and FastAPI TestClient",
+            "Mocking external API boundaries with pytest-mock and respx",
+            "Measuring and maintaining test coverage standards"
+          ],
+          "deliverable": "Comprehensive Pytest Test Suite (10+ tests) with Mock Fixtures",
+          "milestone": "Created a robust test suite covering edge cases, network failures, and schema anomalies.",
+          "dsa": {
+            "sessions": 3,
+            "minutesPerSession": 40,
+            "focus": "Binary Search Trees (Validate BST, Kth Smallest Element in BST, Lowest Common Ancestor)"
+          },
+          "days": [
+            {
+              "day": 1,
+              "title": "Stack Trace Analysis & Root-Cause Triage",
+              "what": "Engineer a structured debugging workflow. Feed 3 real, complex Python exceptions (asyncio timeout, Pydantic validation error, circular import) into an LLM with debug prompts.",
+              "produce": "docs/debugging_playbook.md with 3 worked case studies and triage templates.",
+              "check": "Verify prompt isolates the exact offending line and offers 3 ranked remedies.",
+              "duration_min": 120
+            },
+            {
+              "day": 2,
+              "title": "Generating Comprehensive Unit Tests",
+              "what": "Prompt an LLM to generate unit tests for an existing utility module. Specifically prompt for boundary conditions, null inputs, unicode strings, and overflow values.",
+              "produce": "tests/test_utilities.py with 6 high-coverage test cases.",
+              "check": "Run pytest -v tests/test_utilities.py; ensure all tests pass.",
+              "duration_min": 120
+            },
+            {
+              "day": 3,
+              "title": "Async Testing with HTTPX & TestClient",
+              "what": "Write integration tests for all FastAPI endpoints using httpx.AsyncClient and pytest-asyncio. Validate status codes, error payload schemas, and headers.",
+              "produce": "tests/test_endpoints.py with asynchronous test functions.",
+              "check": "Run pytest tests/test_endpoints.py; confirm async event loop handles calls without warnings.",
+              "duration_min": 120
+            },
+            {
+              "day": 4,
+              "title": "Mocking Third-Party LLM APIs",
+              "what": "Implement robust mocking for OpenAI/Anthropic network calls. Use pytest fixtures and mock objects to simulate rate limits (429), server errors (500), and malformed JSON.",
+              "produce": "tests/conftest.py with mock_llm_client fixtures.",
+              "check": "Run test suite with internet connection disabled; confirm 100% of tests still pass.",
+              "duration_min": 120
+            },
+            {
+              "day": 5,
+              "title": "Code Coverage Auditing",
+              "what": "Instrument test suite with pytest-cov. Generate HTML coverage report, analyze untested branches, and prompt LLM to write targeted regression tests for gaps.",
+              "produce": "coverage_report/ and new tests bringing coverage to > 85%.",
+              "check": "Execute pytest --cov=backend --cov-report=term-missing; verify coverage threshold.",
+              "duration_min": 120
+            },
+            {
+              "day": 6,
+              "title": "Flagship Project Test Suite Expansion",
+              "what": "Add 10+ thorough tests to your Personal AI Assistant flagship project. Ensure error cases, mock providers, and boundary conditions are covered.",
+              "produce": "Expanded tests/ suite in flagship repository meeting Month 2 milestones.",
+              "check": "Run full test suite via single command: pytest; verify all pass cleanly.",
+              "duration_min": 120
+            },
+            {
+              "day": 7,
+              "title": "Catch-up, Review and Consolidate",
+              "what": "Review Week 7 testing patterns, verify competency skills ticked with test links, and complete DSA session 3.",
+              "produce": "Weekly reflection log and solved BST DSA problems.",
+              "check": "Verify all test files adhere to PEP 8 standards and are committed to git.",
+              "duration_min": 120
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "title": "Code Review, Git & Secret Security",
+          "goal": "Build automated code review checklists, establish trunk-based Git workflows, and enforce pre-commit secret detection and dependency audits.",
+          "concepts": [
+            "AI-assisted code review: assessing style, logic, security, and edge-cases",
+            "Semantic Git commits and structured Pull Request description generation",
+            "Pre-commit hooks: linting (ruff), formatting (black), and secret scanning (detect-secrets)",
+            "Dependency auditing (pip-audit) and CVE vulnerability triage",
+            "Automated CodeRabbit / GitHub Actions review simulation"
+          ],
+          "deliverable": "Automated Pre-Commit Suite & AI Code Review Checklist",
+          "milestone": "Configured repository with automated linting, secret detection, and code review rubric.",
+          "dsa": {
+            "sessions": 3,
+            "minutesPerSession": 40,
+            "focus": "Backtracking (Subsets, Combination Sum, Permutations)"
+          },
+          "days": [
+            {
+              "day": 1,
+              "title": "AI Code Review Prompting & Rubrics",
+              "what": "Design a 4-tier code review prompt (Correctness, Security, Performance, Maintainability). Run prompt against 3 deliberate code diffs containing bugs.",
+              "produce": "checklists/code_review_prompt.md and review_rubric.md.",
+              "check": "Verify prompt catches intentional off-by-one error and SQL string concatenation vulnerability.",
+              "duration_min": 120
+            },
+            {
+              "day": 2,
+              "title": "Git Commit & Pull Request Generators",
+              "what": "Create a CLI script or shell function that feeds staged git diffs into an LLM to generate conventional semantic commits and Markdown PR descriptions.",
+              "produce": "scripts/git_commit_helper.py and sample PR template.",
+              "check": "Stage a multi-file change; generate a PR description containing Summary, Test Plan, and Risks.",
+              "duration_min": 120
+            },
+            {
+              "day": 3,
+              "title": "Pre-Commit Hooks Setup",
+              "what": "Configure .pre-commit-config.yaml with ruff (linter + formatter) and check-yaml. Verify hooks run automatically before each git commit.",
+              "produce": ".pre-commit-config.yaml and run on all project files.",
+              "check": "Attempt commit with unformatted Python file; verify pre-commit halts and auto-formats.",
+              "duration_min": 120
+            },
+            {
+              "day": 4,
+              "title": "Secret Detection & Sanitization",
+              "what": "Integrate detect-secrets or gitleaks into your repository workflow. Simulate accidental commit of fake API keys and verify detection stops the commit.",
+              "produce": ".secrets.baseline configuration and incident remediation guide.",
+              "check": "Attempt committing fake sk-proj-... key; verify pre-commit hook rejects commit immediately.",
+              "duration_min": 120
+            },
+            {
+              "day": 5,
+              "title": "Dependency Security Auditing",
+              "what": "Audit python dependencies using pip-audit. Document any vulnerable transitive dependencies and generate clean requirements.txt / pyproject.toml locks.",
+              "produce": "security/audit_report.txt and pinned secure requirements.txt.",
+              "check": "Execute pip-audit; confirm zero critical or high known vulnerabilities reported.",
+              "duration_min": 120
+            },
+            {
+              "day": 6,
+              "title": "Flagship Project Month 2 Milestone Delivery",
+              "what": "Finalize Month 2 of the flagship Personal AI Assistant: code review helper endpoint, clean pre-commit hooks, and complete README documentation.",
+              "produce": "Month 2 release tag on flagship repository with all tests passing.",
+              "check": "Verify all checklist items in projects.html under Month 2 are completed.",
+              "duration_min": 120
+            },
+            {
+              "day": 7,
+              "title": "Catch-up, Review and Consolidate",
+              "what": "Review Month 2 learnings across agents, comprehension, debugging, and git security. Complete DSA session 3 and plan Month 3.",
+              "produce": "Month 2 review log and updated competency checklist.",
+              "check": "Verify clean git working tree on all projects.",
+              "duration_min": 120
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "LLM applications and agents",
+      "weeks": [
+        {
+          "id": 9,
+          "title": "Production RAG Architecture",
+          "goal": "Build an end-to-end Retrieval-Augmented Generation pipeline with chunking strategies, embeddings, vector indexing, search, and citation grounding.",
+          "concepts": [
+            "RAG architecture: Ingestion, Chunking, Embedding, Indexing, Retrieval, Synthesis",
+            "Chunking strategies: fixed-size vs recursive character vs semantic chunking",
+            "Vector databases: local vector stores (Chroma, Qdrant) and indexing algorithms",
+            "Similarity metrics: cosine similarity, euclidean distance, MMR (Maximal Marginal Relevance)",
+            "Grounding and citations: extracting exact source provenance into model responses"
+          ],
+          "deliverable": "Working RAG Service with Document Ingestion and Citation Extraction",
+          "milestone": "Full document Q&A pipeline that answers queries strictly with citations and zero hallucinations.",
+          "dsa": {
+            "sessions": 3,
+            "minutesPerSession": 40,
+            "focus": "Graphs & BFS/DFS (Number of Islands, Clone Graph, Pacific Atlantic Water Flow)"
+          },
+          "days": [
+            {
+              "day": 1,
+              "title": "Document Parsing & Chunking Strategies",
+              "what": "Build a document ingestion script supporting PDF and Markdown files. Compare naive chunking (500 chars) against recursive character chunking with 50-token overlap.",
+              "produce": "rag/chunking.py with chunk size and overlap parameters.",
+              "check": "Inspect chunks; verify sentence boundaries are preserved and semantic fragments remain coherent.",
+              "duration_min": 120
+            },
+            {
+              "day": 2,
+              "title": "Vector Embeddings & Vector Store Setup",
+              "what": "Initialize an embedded vector database (Chroma or Qdrant in-memory). Ingest processed chunks using text-embedding-3-small and verify vector indexing.",
+              "produce": "rag/vector_store.py with add_documents and query methods.",
+              "check": "Execute sample vector query; retrieve top 3 nearest neighbor documents with distance scores.",
+              "duration_min": 120
+            },
+            {
+              "day": 3,
+              "title": "Retrieval Precision & Reranking Concepts",
+              "what": "Implement similarity search and explore diversity filtering (Maximal Marginal Relevance - MMR). Test query variations on a sample technical documentation set.",
+              "produce": "rag/retriever.py supporting top_k and similarity threshold filters.",
+              "check": "Compare naive top-k vs MMR on ambiguous queries; verify MMR returns more diverse context.",
+              "duration_min": 120
+            },
+            {
+              "day": 4,
+              "title": "Prompt Synthesis with Grounded Citations",
+              "what": "Engineer a synthesis prompt that injects retrieved context chunks with unique IDs ([doc_1], [doc_2]). Require the LLM to output citations for every claim.",
+              "produce": "rag/generator.py that parses response text and returns verified citations list.",
+              "check": "Submit query requiring 2 separate docs; verify response cites both [doc_1] and [doc_2] correctly.",
+              "duration_min": 120
+            },
+            {
+              "day": 5,
+              "title": "Refusal Mechanics for Out-of-Domain Queries",
+              "what": "Implement strict grounding guardrails. Instruct model to respond 'I do not have enough context to answer this' when retrieved similarity score falls below threshold.",
+              "produce": "tests/test_rag_refusal.py validating out-of-domain rejection.",
+              "check": "Query system with a totally irrelevant topic (e.g. quantum physics on a recipe doc); confirm refusal.",
+              "duration_min": 120
+            },
+            {
+              "day": 6,
+              "title": "Flagship Project Month 3 Integration: Document RAG",
+              "what": "Incorporate RAG pipeline into the flagship Personal AI Assistant: user uploads Markdown/PDF notes, assistant indexes them, and answers with clickable source citations.",
+              "produce": "Integrated RAG endpoint POST /api/rag/query and Streamlit document upload UI.",
+              "check": "Upload a course syllabus; query assignment deadlines; confirm exact date and source quote.",
+              "duration_min": 120
+            },
+            {
+              "day": 7,
+              "title": "Catch-up, Review and Consolidate",
+              "what": "Review Week 9 RAG architecture, clean up vector indices, verify tests, and complete DSA session 3.",
+              "produce": "Weekly reflection log and solved Graph BFS/DFS DSA problems.",
+              "check": "Verify all RAG automated tests pass and memory cleanups run after test suite.",
+              "duration_min": 120
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "title": "Agent Fundamentals & Tool Calling",
+          "goal": "Build autonomous agents using function calling, tool schemas, execution sandboxes, and loop termination mechanics.",
+          "concepts": [
+            "ReAct pattern (Reasoning + Acting) and native Function Calling",
+            "Tool definitions: JSON Schema parameter validation and descriptions",
+            "Execution loop: Prompt -> Model -> Tool Call -> Execute -> Tool Result -> Model",
+            "Sandboxing and safety boundaries: whitelist approved tools only",
+            "Handling tool execution failures and retry mechanics"
+          ],
+          "deliverable": "Autonomous Tool-Calling Agent with 3+ Sandboxed Tools",
+          "milestone": "Agent capable of solving multi-step tasks by selecting and chaining appropriate tools.",
+          "dsa": {
+            "sessions": 3,
+            "minutesPerSession": 40,
+            "focus": "Advanced Graphs (Course Schedule, Graph Valid Tree, Number of Connected Components)"
+          },
+          "days": [
+            {
+              "day": 1,
+              "title": "Function Calling & Tool Schema Design",
+              "what": "Study native tool calling protocols in OpenAI and Anthropic SDKs. Write rigorous JSON Schema definitions for 3 tools: calculate_math, search_local_notes, get_current_time.",
+              "produce": "agent/tools/definitions.py with strict Pydantic/JSON schemas.",
+              "check": "Verify tool descriptions are detailed enough for the model to choose the right tool reliably.",
+              "duration_min": 120
+            },
+            {
+              "day": 2,
+              "title": "Tool Dispatcher & Safe Execution Engine",
+              "what": "Implement a tool registry and dispatcher. Ensure parameter validation runs before execution, and wrap executions in try/catch to return structured error messages back to the LLM.",
+              "produce": "agent/tools/dispatcher.py executing valid tools and catching errors gracefully.",
+              "check": "Pass invalid parameters to tool dispatcher; verify structured error JSON returns to model.",
+              "duration_min": 120
+            },
+            {
+              "day": 3,
+              "title": "The Agent Execution Loop",
+              "what": "Construct the core agent while loop: append user prompt, invoke model with tools, check for tool_calls finish_reason, dispatch tools, append results, and repeat until final answer.",
+              "produce": "agent/core_loop.py implementing the step execution cycle.",
+              "check": "Trace loop execution on a 2-tool query; verify conversation history contains all tool messages.",
+              "duration_min": 120
+            },
+            {
+              "day": 4,
+              "title": "Loop Limits & Infinite Loop Safeguards",
+              "what": "Implement safety guardrails: max_steps counter (e.g. 5 steps), timeout limits, duplicate tool call detection, and token budget expenditure monitors.",
+              "produce": "agent/guardrails.py preventing runaway agent loops.",
+              "check": "Provide an unresolvable prompt; verify agent gracefully stops at max_steps with warning.",
+              "duration_min": 120
+            },
+            {
+              "day": 5,
+              "title": "Adding Useful Developer Tools",
+              "what": "Build 2 practical developer tools for your agent: fetch_github_issue (read-only) and search_codebase. Strictly forbid shell execution or write access.",
+              "produce": "agent/tools/developer_tools.py with read-only guarantees.",
+              "check": "Query agent to analyze a specific code file; verify it calls search_codebase and synthesizes finding.",
+              "duration_min": 120
+            },
+            {
+              "day": 6,
+              "title": "Comprehensive Agent Integration Tests",
+              "what": "Write pytest suite for the agent using mocked tool responses. Verify single-tool calls, multi-tool chained calls, and error-recovery paths.",
+              "produce": "tests/test_agent.py with 5+ scenario test cases.",
+              "check": "Run pytest tests/test_agent.py; confirm all agent branches succeed deterministically.",
+              "duration_min": 120
+            },
+            {
+              "day": 7,
+              "title": "Catch-up, Review and Consolidate",
+              "what": "Review Week 10 agent patterns, commit codebase, and complete DSA session 3.",
+              "produce": "Weekly reflection log and solved Advanced Graph DSA problems.",
+              "check": "Verify agent code contains no lingering print statements or exposed API keys.",
+              "duration_min": 120
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "title": "State, Memory, MCP & Human Approval",
+          "goal": "Build stateful multi-turn agents with persistent memory, Model Context Protocol (MCP) integrations, and mandatory human-in-the-loop approval gates.",
+          "concepts": [
+            "Conversation memory architectures: sliding window, summary memory, entity stores",
+            "Model Context Protocol (MCP) concepts: client, server, tools, and resource patterns",
+            "Human-in-the-loop (HITL): approval interrupts for sensitive or destructive actions",
+            "State persistence with SQLite / JSON file checkpoints",
+            "Multi-step planning and deterministic workflow orchestration"
+          ],
+          "deliverable": "Stateful Agent with MCP Tool Integration & Human Approval Gate",
+          "milestone": "Working agent with persistent session memory and a secure approval interruption workflow.",
+          "dsa": {
+            "sessions": 3,
+            "minutesPerSession": 40,
+            "focus": "Dynamic Programming Basics (Climbing Stairs, Coin Change, Longest Increasing Subsequence)"
+          },
+          "days": [
+            {
+              "day": 1,
+              "title": "Memory Architectures: Window vs Summary",
+              "what": "Compare conversation memory approaches. Build a sliding window memory (last 10 turns) and a background summary memory (summarizing earlier turns into context).",
+              "produce": "agent/memory/summary_memory.py managing context budgets efficiently.",
+              "check": "Run a 20-turn conversation; verify total prompt tokens remain bounded under 2000 tokens.",
+              "duration_min": 120
+            },
+            {
+              "day": 2,
+              "title": "State Persistence & Checkpoints",
+              "what": "Implement persistent conversation state using SQLite. Serialize message history, pending tool calls, and execution status so conversations survive server restarts.",
+              "produce": "agent/state_store.py with save_state and load_state methods.",
+              "check": "Simulate process restart mid-conversation; reload session and continue seamlessly.",
+              "duration_min": 120
+            },
+            {
+              "day": 3,
+              "title": "Model Context Protocol (MCP) Fundamentals",
+              "what": "Study the Model Context Protocol architecture (MCP). Set up an MCP client in Python and connect it to a standard local MCP server (e.g., filesystem or fetch).",
+              "produce": "agent/mcp_client.py communicating with an external MCP server.",
+              "check": "Query MCP server for available tools; verify dynamic tool registration works.",
+              "duration_min": 120
+            },
+            {
+              "day": 4,
+              "title": "Human-in-the-Loop (HITL) Approval Gate",
+              "what": "Design an approval interruption workflow for sensitive operations. If the agent proposes a destructive action, pause execution, return pending approval status, and await user input.",
+              "produce": "agent/approval_gate.py with pause and resume execution methods.",
+              "check": "Trigger sensitive tool; verify execution halts and only proceeds after POST /approve.",
+              "duration_min": 120
+            },
+            {
+              "day": 5,
+              "title": "Interactive UI for Human Approval",
+              "what": "Build Streamlit UI component displaying pending tool execution cards with parameters, danger level, and 'Approve' / 'Deny' buttons.",
+              "produce": "frontend/components/approval_ui.py integrated into the main chat window.",
+              "check": "Simulate user clicking 'Deny'; confirm agent receives denial message and explains politely.",
+              "duration_min": 120
+            },
+            {
+              "day": 6,
+              "title": "Flagship Project Month 3 Milestone Completion",
+              "what": "Integrate RAG + Tool Calling + Human Approval into the flagship Personal AI Assistant. Ensure all security guarantees hold.",
+              "produce": "Flagship Assistant Month 3 release tag with complete documentation.",
+              "check": "Execute end-to-end workflow: document search -> tool proposal -> approval -> completion.",
+              "duration_min": 120
+            },
+            {
+              "day": 7,
+              "title": "Catch-up, Review and Consolidate",
+              "what": "Review Week 11 architectures, verify state management tests pass, and complete DSA session 3.",
+              "produce": "Weekly reflection log and solved DP DSA problems.",
+              "check": "Confirm all code is committed and tests pass.",
+              "duration_min": 120
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "title": "Agent Evaluation & Benchmarking",
+          "goal": "Build an offline evaluation harness with 25+ curated task datasets, tracking task success rate, execution latency, and token cost.",
+          "concepts": [
+            "Evaluation methodology: Unit tests vs LLM-as-a-judge vs deterministic assertion checks",
+            "Curating representative evaluation datasets with golden ground-truth outputs",
+            "Metrics: Task completion rate, Tool selection accuracy, Latency (p50, p95), Cost per task",
+            "Regression testing: detecting agent capability drift across model updates",
+            "Generating comprehensive eval comparison reports"
+          ],
+          "deliverable": "Agent Evaluation Suite with 25-Task Dataset & Benchmark Report",
+          "milestone": "Evaluated agent on 25 benchmark tasks with quantifiable metrics for accuracy, latency, and cost.",
+          "dsa": {
+            "sessions": 3,
+            "minutesPerSession": 40,
+            "focus": "Dynamic Programming Intermediate (Longest Common Subsequence, Word Break, House Robber)"
+          },
+          "days": [
+            {
+              "day": 1,
+              "title": "Evaluation Dataset Construction",
+              "what": "Create a benchmark dataset of 25 diverse tasks (data extraction, code debugging, math, multi-step search). Include expected tool calls and golden output criteria.",
+              "produce": "evals/dataset.json with 25 structured task specifications.",
+              "check": "Verify dataset covers easy, medium, and hard tasks with distinct edge cases.",
+              "duration_min": 120
+            },
+            {
+              "day": 2,
+              "title": "Deterministic Assertion Evaluators",
+              "what": "Build automated programmatic evaluators: checking exact regex matches, JSON schema validity, required key presence, and absence of banned phrases.",
+              "produce": "evals/deterministic_eval.py evaluating outputs without subjective judgment.",
+              "check": "Run deterministic evaluator against 10 sample outputs; verify zero false positives.",
+              "duration_min": 120
+            },
+            {
+              "day": 3,
+              "title": "LLM-as-a-Judge with Structured Rubric",
+              "what": "Build an LLM-as-a-Judge module using a frontier model with a strict scoring rubric (1-5 scale) across Accuracy, Helpfulness, and Conciseness.",
+              "produce": "evals/judge_eval.py with scoring prompts and reasoning extraction.",
+              "check": "Evaluate 5 borderline responses; verify judge provides sound reasoning justifying the score.",
+              "duration_min": 120
+            },
+            {
+              "day": 4,
+              "title": "Telemetry: Latency & Cost Tracking",
+              "what": "Instrument the evaluation runner with timing and token usage telemetry. Compute p50 and p95 latency, prompt/completion tokens, and exact cost in USD per task.",
+              "produce": "evals/runner.py running the dataset and logging full execution metrics.",
+              "check": "Execute 5 test runs; verify telemetry outputs accurate latency and cost metrics.",
+              "duration_min": 120
+            },
+            {
+              "day": 5,
+              "title": "Full Benchmark Execution",
+              "what": "Run the complete 25-task evaluation suite against your flagship agent. Collect success rates, failure breakdowns, and bottleneck analysis.",
+              "produce": "evals/results_m3.json containing all 25 benchmark runs.",
+              "check": "Calculate overall success rate; identify the top 2 failure causes.",
+              "duration_min": 120
+            },
+            {
+              "day": 6,
+              "title": "Evaluation Report & Visualization",
+              "what": "Synthesize results into a markdown benchmark report with markdown tables, pass/fail percentages, and recommendations for prompt/tool tuning.",
+              "produce": "EVAL_REPORT.md detailing accuracy (target > 80%), latency, and cost per task.",
+              "check": "Review report for objectivity and actionable engineering recommendations.",
+              "duration_min": 120
+            },
+            {
+              "day": 7,
+              "title": "Catch-up, Review and Consolidate",
+              "what": "Review Month 3 learnings across RAG, Agents, State, and Evals. Complete DSA session 3 and plan Month 4.",
+              "produce": "Month 3 review log, ticked competency skills with eval evidence, and solved DSA problems.",
+              "check": "Verify all Month 3 roadmap tasks are completed and committed to git.",
+              "duration_min": 120
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Production and hiring",
+      "weeks": [
+        {
+          "id": 13,
+          "title": "AI Security & Threat Modeling",
+          "goal": "Master defensive AI engineering: prompt injection mitigation, indirect injection defenses, least-privilege tool design, and OWASP Top 10 for LLMs.",
+          "concepts": [
+            "OWASP Top 10 for LLM Applications (Prompt Injection, Insecure Output, Tool Misuse)",
+            "Indirect Prompt Injection via untrusted external documents and web scraping",
+            "Defense-in-depth: content filters, delimiter isolation, secondary confirmation",
+            "Least-privilege architecture: token scoping, read-only credentials, network isolation",
+            "Red-teaming methodology and adversarial safety testing"
+          ],
+          "deliverable": "AI Application Threat Model & Security Hardening Report",
+          "milestone": "Hardened application against OWASP LLM vulnerabilities with automated security regression tests.",
+          "dsa": {
+            "sessions": 3,
+            "minutesPerSession": 40,
+            "focus": "Intervals & Greedy (Merge Intervals, Insert Interval, Non-overlapping Intervals)"
+          },
+          "days": [
+            {
+              "day": 1,
+              "title": "OWASP Top 10 for LLM Deep Dive",
+              "what": "Study the official OWASP Top 10 for LLM Applications. Map each risk (LLM01 Prompt Injection, LLM02 Insecure Output Handling, etc.) to your flagship project architecture.",
+              "produce": "security/owasp_llm_mapping.md identifying relevant exposure vectors.",
+              "check": "Verify each of the top 5 vulnerabilities has a concrete risk assessment for your app.",
+              "duration_min": 120
+            },
+            {
+              "day": 2,
+              "title": "Adversarial Prompt Injection Testing",
+              "what": "Conduct a red-teaming exercise against your app. Test 10 adversarial attacks: jailbreak personas, cognitive overload, delimiter escapes, and instruction overrides.",
+              "produce": "security/red_team_log.md documenting attack vectors, prompts, and system reactions.",
+              "check": "Confirm whether the baseline system defended against or succumbed to each attack.",
+              "duration_min": 120
+            },
+            {
+              "day": 3,
+              "title": "Indirect Prompt Injection via RAG",
+              "what": "Simulate indirect prompt injection: hide an adversarial payload inside a document uploaded to the RAG pipeline. Verify if retrieval compromises the system prompt.",
+              "produce": "security/indirect_injection_test.md with reproduction steps and defensive fixes.",
+              "check": "Implement document delimiter isolation; verify the model treats document contents strictly as data.",
+              "duration_min": 120
+            },
+            {
+              "day": 4,
+              "title": "Least Privilege & Tool Boundary Hardening",
+              "what": "Harden all tool interfaces: enforce input sanitization, validate file path parameters against directory traversal (no ../), and revoke all unnecessary OS permissions.",
+              "produce": "security/tool_hardening_patch.py with strict path and parameter validators.",
+              "check": "Attempt path traversal attack (e.g., ../../../etc/passwd); verify validator blocks request.",
+              "duration_min": 120
+            },
+            {
+              "day": 5,
+              "title": "Automated Security Test Suite",
+              "what": "Write automated security unit tests using pytest. Ensure regression tests run adversarial payloads on every commit to prevent security degradation.",
+              "produce": "tests/test_security_regressions.py with 6+ security test cases.",
+              "check": "Run pytest tests/test_security_regressions.py; confirm all adversarial attempts are neutralized.",
+              "duration_min": 120
+            },
+            {
+              "day": 6,
+              "title": "Threat Model & Security Dossier",
+              "what": "Compile your threat model, red-team results, mitigations, and architectural boundaries into an executive security document ready for technical interviews.",
+              "produce": "THREAT_MODEL.md in project root.",
+              "check": "Review document against professional industry security standards.",
+              "duration_min": 120
+            },
+            {
+              "day": 7,
+              "title": "Catch-up, Review and Consolidate",
+              "what": "Review Week 13 security hardening, commit security documentation, and complete DSA session 3.",
+              "produce": "Weekly reflection log and solved Intervals DSA problems.",
+              "check": "Ensure security documentation contains zero sensitive production keys.",
+              "duration_min": 120
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "title": "Reliability & Observability",
+          "goal": "Implement structured logging, distributed tracing, latency/cost telemetry, and fallback resilience patterns for LLM applications.",
+          "concepts": [
+            "Structured logging in Python using structlog / loguru with correlation IDs",
+            "LLM observability concepts: tracing prompts, generations, and tool invocations",
+            "Resilience patterns: retries with exponential backoff, circuit breakers, fallback models",
+            "Rate limiting and quota management: token buckets and client throttling",
+            "Health checks and operational alert triggers"
+          ],
+          "deliverable": "Observability & Resilience Layer with Fallback Mechanics",
+          "milestone": "Zero-downtime reliability setup with structured JSON logging and automatic secondary model fallback.",
+          "dsa": {
+            "sessions": 3,
+            "minutesPerSession": 40,
+            "focus": "Heaps / Priority Queues (Kth Largest Element, Top K Frequent Elements, Find Median from Data Stream)"
+          },
+          "days": [
+            {
+              "day": 1,
+              "title": "Structured JSON Logging & Trace IDs",
+              "what": "Configure structured JSON logging for your FastAPI backend. Inject a unique trace_id into every incoming request to correlate API calls, model requests, and tool execution.",
+              "produce": "backend/logging_config.py with JSON formatter and trace_id contextvars.",
+              "check": "Send a request; verify console emits machine-readable JSON logs with trace_id attached.",
+              "duration_min": 120
+            },
+            {
+              "day": 2,
+              "title": "Model Fallback & Circuit Breakers",
+              "what": "Implement model fallback logic: if primary model (e.g. Claude 3.5) encounters 500 error or rate limit (429), automatically catch exception and failover to secondary model (GPT-4o).",
+              "produce": "backend/resilience/fallback_client.py handling automatic provider failover.",
+              "check": "Simulate primary provider outage; verify application transparently answers using backup model.",
+              "duration_min": 120
+            },
+            {
+              "day": 3,
+              "title": "Rate Limiting & Token Budget Throttling",
+              "what": "Implement a token bucket rate limiter middleware for FastAPI. Restrict requests per IP and cap daily estimated token spend to prevent bill shock.",
+              "produce": "backend/middleware/rate_limiter.py enforcing quotas.",
+              "check": "Send 20 rapid requests; verify middleware responds with 429 Too Many Requests after threshold.",
+              "duration_min": 120
+            },
+            {
+              "day": 4,
+              "title": "Telemetry Dashboard & Metrics Export",
+              "what": "Build an endpoint GET /api/metrics tracking: total requests, average latency, total tokens consumed, error rates, and fallback events.",
+              "produce": "backend/endpoints/metrics.py exposing operational telemetry.",
+              "check": "Call /api/metrics; verify accurate aggregated counters for recent traffic.",
+              "duration_min": 120
+            },
+            {
+              "day": 5,
+              "title": "Health Checks & Readiness Probes",
+              "what": "Create GET /health and GET /ready endpoints. Verify model API connectivity, database read/write access, and configuration validity in the readiness probe.",
+              "produce": "backend/endpoints/health.py conforming to container orchestrator standards.",
+              "check": "Test health endpoints with invalid config; verify /ready returns 503 Service Unavailable.",
+              "duration_min": 120
+            },
+            {
+              "day": 6,
+              "title": "Integration into Flagship Project",
+              "what": "Apply structured logging, fallback resilience, and health probes to the flagship Personal AI Assistant. Run chaos test verifying graceful degradation.",
+              "produce": "Flagship Assistant with full observability suite committed and tested.",
+              "check": "Run full test suite; confirm zero regressions and clean structured log outputs.",
+              "duration_min": 120
+            },
+            {
+              "day": 7,
+              "title": "Catch-up, Review and Consolidate",
+              "what": "Review Week 14 reliability patterns, commit changes, and complete DSA session 3.",
+              "produce": "Weekly reflection log and solved Heap DSA problems.",
+              "check": "Ensure test suite passes cleanly with new middleware enabled.",
+              "duration_min": 120
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "title": "Docker, GitHub Actions CI & Cloud Deploy",
+          "goal": "Containerize the full-stack AI application with multi-stage Docker builds, establish GitHub Actions CI pipelines, and deploy to a cloud container platform.",
+          "concepts": [
+            "Multi-stage Docker builds for Python: optimizing image size and security",
+            "Docker Compose for multi-container orchestration (FastAPI + Streamlit)",
+            "GitHub Actions CI: automated linting (ruff), security audit, and pytest execution",
+            "Environment secret management in cloud deployments",
+            "Deploying containerized apps to cloud platforms (Render, Fly.io, or Railway)"
+          ],
+          "deliverable": "Containerized Application with GitHub Actions CI & Public Cloud URL",
+          "milestone": "Production Docker container deployed to cloud platform passing all automated CI checks.",
+          "dsa": {
+            "sessions": 3,
+            "minutesPerSession": 40,
+            "focus": "Trie & String Algorithms (Implement Trie, Design Add and Search Words Data Structure)"
+          },
+          "days": [
+            {
+              "day": 1,
+              "title": "Multi-Stage Dockerfile Optimization",
+              "what": "Write production multi-stage Dockerfile for FastAPI backend. Use slim base image, non-root user (appuser), and clean dependency wheel builds to minimize image size.",
+              "produce": "Dockerfile and .dockerignore optimized for Python FastAPI.",
+              "check": "Build image; verify size is < 250MB and container runs as non-root user.",
+              "duration_min": 120
+            },
+            {
+              "day": 2,
+              "title": "Multi-Service Orchestration with Docker Compose",
+              "what": "Create docker-compose.yml orchestrating both backend (FastAPI) and frontend (Streamlit) services on a shared internal bridge network with environment variable injection.",
+              "produce": "docker-compose.yml and local test launch instructions.",
+              "check": "Run docker compose up --build; open browser and confirm full frontend-to-backend communication.",
+              "duration_min": 120
+            },
+            {
+              "day": 3,
+              "title": "GitHub Actions CI Workflow",
+              "what": "Create .github/workflows/ci.yml running on push to main and PRs: (1) Checkout, (2) Set up Python, (3) Install deps, (4) Lint with ruff, (5) Run pytest with coverage.",
+              "produce": ".github/workflows/ci.yml with complete continuous integration pipeline.",
+              "check": "Push commit to GitHub; verify GitHub Actions runner executes all stages green.",
+              "duration_min": 120
+            },
+            {
+              "day": 4,
+              "title": "Cloud Platform Deployment Preparation",
+              "what": "Select a free-tier cloud deployment platform (Render, Fly.io, or Railway). Configure build environment, environment secrets (API keys), and PORT binding dynamically.",
+              "produce": "render.yaml / fly.toml deployment manifest and setup guide.",
+              "check": "Verify application binds to 0.0.0.0:$PORT as required by cloud container runtimes.",
+              "duration_min": 120
+            },
+            {
+              "day": 5,
+              "title": "Deploying the Live Application",
+              "what": "Deploy the containerized application to the cloud platform. Verify DNS resolution, SSL certificates, health check probe success, and live model API response.",
+              "produce": "Public live URL (e.g., https://my-ai-assistant.onrender.com) documented in README.",
+              "check": "Access live URL from an external mobile device; verify complete chat flow works live.",
+              "duration_min": 120
+            },
+            {
+              "day": 6,
+              "title": "Flagship Project Final Deployment Checklist",
+              "what": "Complete the production deployment checklist in projects.html: README with architecture diagram, live URL, passing CI badge, and reproducible Docker steps.",
+              "produce": "Completed Month 4 flagship project milestone with live production URL.",
+              "check": "Verify all items in Month 4 checklist on projects.html are checked off.",
+              "duration_min": 120
+            },
+            {
+              "day": 7,
+              "title": "Catch-up, Review and Consolidate",
+              "what": "Review Week 15 deployment setup, verify cloud logs, and complete DSA session 3.",
+              "produce": "Weekly reflection log and solved Trie DSA problems.",
+              "check": "Ensure production environment operates smoothly without unexpected container restarts.",
+              "duration_min": 120
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "title": "Portfolio, Live Demo & Interview Prep",
+          "goal": "Polish project READMEs, record 2-minute video demonstrations, complete interview question banks, and prepare architectural defense for internship interviews.",
+          "concepts": [
+            "Technical README architecture: Problem, Solution, Architecture Diagram, Tech Stack, Benchmarks",
+            "Effective 2-minute asynchronous video demo recording for hiring managers",
+            "System design interview patterns for AI engineering roles",
+            "Answering tough trade-off questions (RAG vs Fine-tuning, Cost vs Quality)",
+            "Live coding & technical interview behavioral strategies"
+          ],
+          "deliverable": "Portfolio-Grade Repository, Video Demo, and Completed Interview Question Bank",
+          "milestone": "Production-ready GitHub portfolio with live demo, documentation, and 50+ answered interview questions.",
+          "dsa": {
+            "sessions": 3,
+            "minutesPerSession": 40,
+            "focus": "System Design Basics & Interview Mock Coding"
+          },
+          "days": [
+            {
+              "day": 1,
+              "title": "Flagship Project README Polish",
+              "what": "Transform the flagship project README into a portfolio centerpiece: badge row (CI, Python, Docker), system architecture diagram, live demo GIF, benchmarks, and installation.",
+              "produce": "Comprehensive, portfolio-grade README.md in flagship project repository.",
+              "check": "Review README against top open-source repositories; verify zero formatting errors.",
+              "duration_min": 120
+            },
+            {
+              "day": 2,
+              "title": "2-Minute Asynchronous Video Demo",
+              "what": "Record a concise 120-second video demo using Loom or OBS: (1) 20s Problem & Architecture, (2) 60s Live feature walkthrough with RAG & Tool call, (3) 40s Engineering depth & tests.",
+              "produce": "Link to video demo embedded prominently at the top of project README.",
+              "check": "Watch demo recording; verify audio is crisp, code is legible, and pitch is strictly engineering-focused.",
+              "duration_min": 120
+            },
+            {
+              "day": 3,
+              "title": "Interview Bank: LLM Fundamentals & Prompting",
+              "what": "Draft comprehensive answers for the LLMs (10 Qs) and Prompting (8 Qs) sections in interview.html. Reference your actual projects and benchmark measurements in answers.",
+              "produce": "Completed answers saved locally in interview.html.",
+              "check": "Review answers to ensure they explain 'why' and architectural tradeoffs, not just textbook definitions.",
+              "duration_min": 120
+            },
+            {
+              "day": 4,
+              "title": "Interview Bank: RAG & Agents",
+              "what": "Draft comprehensive answers for RAG (8 Qs) and Agents (8 Qs) in interview.html. Detail chunking strategies, vector index tradeoffs, and human-in-the-loop safeguards.",
+              "produce": "Completed answers for RAG and Agents saved locally in interview.html.",
+              "check": "Verify answers cite real failure modes you encountered and solved in Weeks 9-11.",
+              "duration_min": 120
+            },
+            {
+              "day": 5,
+              "title": "Interview Bank: Testing, Security & Deployment",
+              "what": "Draft answers for Testing (6 Qs), Security (6 Qs), and Deployment (6 Qs) in interview.html. Highlight your OWASP mitigations, mock testing, and CI pipeline.",
+              "produce": "Completed answers for all remaining questions in interview.html.",
+              "check": "Confirm all 52 interview questions now have comprehensive, personalized answers.",
+              "duration_min": 120
+            },
+            {
+              "day": 6,
+              "title": "13-Skill Competency Verification Audit",
+              "what": "Audit the competency checklist in competency.html. For all 13 skills, ensure you have attached concrete evidence (links to PRs, tests, docs, or eval reports) and tick each.",
+              "produce": "13/13 competencies verified with evidence in competency.html.",
+              "check": "Export progress JSON backup and verify competency state is 100% complete.",
+              "duration_min": 120
+            },
+            {
+              "day": 7,
+              "title": "Final Roadmap Review & Consolidation",
+              "what": "Review your complete 16-week journey: 112 tasks completed, production flagship project live, full interview prep completed. Prepare applications for internships.",
+              "produce": "FINAL_REPORT.md, completed progress export, and internship outreach plan.",
+              "check": "Ensure entire website is committed, pushed to GitHub Pages, and accessible to recruiters.",
+              "duration_min": 120
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

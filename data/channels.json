@@ -1,0 +1,82 @@
+[
+  {
+    "id": "c-karpathy",
+    "name": "Andrej Karpathy",
+    "url": "https://www.youtube.com/@AndrejKarpathy",
+    "topics": ["Neural Networks", "LLM Mechanics", "Tokenization", "Transformers"],
+    "why_recommended": "Former Director of AI at Tesla and OpenAI co-founder. Unmatched first-principles explanations of neural nets, GPT architectures, and tokenization with pure Python code.",
+    "top_picks": ["Let's build GPT: from scratch, in code, spelled out", "Let's build the GPT Tokenizer", "State of GPT (Microsoft Build)"]
+  },
+  {
+    "id": "c-3blue1brown",
+    "name": "3Blue1Brown",
+    "url": "https://www.youtube.com/@3blue1brown",
+    "topics": ["Transformers Intuition", "Attention Mechanism", "Vector Geometry"],
+    "why_recommended": "Grant Sanderson's animated geometric intuition for the attention mechanism, vector embeddings, and matrix projections is the gold standard for conceptual clarity.",
+    "top_picks": ["Visualizing Attention and Transformers", "How Large Language Models Work"]
+  },
+  {
+    "id": "c-freecodecamp",
+    "name": "freeCodeCamp.org",
+    "url": "https://www.youtube.com/@freecodecamp",
+    "topics": ["Full-Stack LLM Apps", "FastAPI", "Docker", "Python Testing"],
+    "why_recommended": "Massive, high-quality, ad-free comprehensive 2-10 hour masterclasses covering Python, FastAPI, Docker, and full-stack generative AI applications.",
+    "top_picks": ["FastAPI Full Course for Beginners", "Docker Containerization Full Course", "Python Testing with pytest"]
+  },
+  {
+    "id": "c-openai",
+    "name": "OpenAI Developers",
+    "url": "https://www.youtube.com/@OpenAIDevelopers",
+    "topics": ["Function Calling", "Structured Outputs", "Assistants API", "OpenAI Agents SDK"],
+    "why_recommended": "Official engineering presentations and deep dives directly from OpenAI engineers demonstrating the newest SDK APIs, structured output mechanics, and agent patterns.",
+    "top_picks": ["OpenAI DevDay Keynote & Breakouts", "Building with Function Calling and Structured Outputs"]
+  },
+  {
+    "id": "c-anthropic",
+    "name": "Anthropic",
+    "url": "https://www.youtube.com/@AnthropicAI",
+    "topics": ["Model Context Protocol (MCP)", "Claude Artifacts", "Prompt Engineering"],
+    "why_recommended": "Official channel providing the definitive architectural guides for Model Context Protocol (MCP), prompt engineering principles, and frontier agent capabilities.",
+    "top_picks": ["Introduction to Model Context Protocol (MCP)", "Anthropic Prompt Engineering Interactive Guide"]
+  },
+  {
+    "id": "c-tiangolo",
+    "name": "Sebastián Ramírez (tiangolo)",
+    "url": "https://www.youtube.com/@tiangolo",
+    "topics": ["FastAPI", "Pydantic", "SQLModel"],
+    "why_recommended": "Creator of FastAPI and SQLModel. Direct authority on modern async Python, type annotations, schema design, and high-performance API design.",
+    "top_picks": ["FastAPI from the Inside Out", "Modern Python with Pydantic V2"]
+  },
+  {
+    "id": "c-owasp",
+    "name": "OWASP Foundation",
+    "url": "https://www.youtube.com/@OWASPGLOBAL",
+    "topics": ["LLM Application Security", "Prompt Injection", "Threat Modeling"],
+    "why_recommended": "Global authority on software security. Features webinars and deep dives on the OWASP Top 10 for Large Language Models by the project core team.",
+    "top_picks": ["OWASP Top 10 for LLMs Deep Dive & Defense Strategies"]
+  },
+  {
+    "id": "c-simon-willison",
+    "name": "Simon Willison",
+    "url": "https://www.youtube.com/results?search_query=Simon+Willison+AI+talks",
+    "topics": ["Prompt Injection", "ReAct Agents from Scratch", "Datasette"],
+    "why_recommended": "Pioneering researcher on Prompt Injection and autonomous agent mechanics. Consistently demonstrates clear, non-bloated, pure-Python AI architectures.",
+    "top_picks": ["Catching Prompt Injections", "Building ReAct Agents from Scratch in Python"]
+  },
+  {
+    "id": "c-statquest",
+    "name": "StatQuest with Josh Starmer",
+    "url": "https://www.youtube.com/@statquest",
+    "topics": ["Vector Embeddings", "Cosine Similarity", "PCA"],
+    "why_recommended": "Breaks down mathematically complex concepts into simple, visual, step-by-step cartoon animations with zero jargon.",
+    "top_picks": ["Word Embeddings and Cosine Similarity Clearly Explained"]
+  },
+  {
+    "id": "c-deeplearningai",
+    "name": "DeepLearning.AI",
+    "url": "https://www.youtube.com/@Deeplearningai",
+    "topics": ["Prompt Engineering", "RAG Systems", "Agent Design"],
+    "why_recommended": "Founded by Andrew Ng. Excellent short courses and high-signal developer interviews covering modern LLM stacks, evaluation, and vector retrieval.",
+    "top_picks": ["ChatGPT Prompt Engineering for Developers", "Building Agentic Workflows"]
+  }
+]

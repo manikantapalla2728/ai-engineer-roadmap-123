@@ -1,0 +1,10 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary / scratch scripts
+builder.py
+generate_high_quality_data.py
+.DS_Store
+Thumbs.db

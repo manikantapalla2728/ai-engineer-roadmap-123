@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Review & Retrospective — AI Engineer Learning Hub</title>
+  <link rel="stylesheet" href="styles/main.css?v=pro-flagship-v3">
+  <script src="data/bundle.js?v=pro-flagship-v3"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="nav" aria-label="Main navigation" style="display:none;"></nav>
+
+  <main id="main">
+    <div class="container page">
+      <header class="page-header">
+        <h1>Weekly Review & Retrospective</h1>
+        <p class="subtitle">Log your weekly progress: what you completed, what slipped, and review your planned vs completed study hours.</p>
+      </header>
+
+      <!-- Weekly Hours & Velocity Chart -->
+      <section class="card mb-6">
+        <h3 class="mb-3">16-Week Progress Velocity Chart</h3>
+        <p class="text-xs text-muted mb-4">Each column represents 14 planned hours (7 days × 2 hours). Colored fill indicates completed days.</p>
+        <div id="chart-container" style="overflow-x:auto; padding-bottom:0.5rem;">
+          <!-- SVG Chart rendered by JS -->
+        </div>
+      </section>
+
+      <!-- Current Week Selector & Retro Form -->
+      <section class="card mb-6">
+        <div class="flex justify-between items-center mb-3 flex-wrap gap-2">
+          <h3>Weekly Retrospective Log</h3>
+          <select id="review-week-selector" class="select" style="max-width:180px;"></select>
+        </div>
+
+        <div class="grid gap-3">
+          <div>
+            <label for="retro-completed" class="text-xs fw-600 text-muted">What I Built & Completed This Week:</label>
+            <textarea id="retro-completed" class="textarea" rows="3" placeholder="Completed RAG pipeline, indexed 5 papers, got 3 tests passing…"></textarea>
+          </div>
+          <div>
+            <label for="retro-slipped" class="text-xs fw-600 text-muted">What Slipped & Blockers Encountered:</label>
+            <textarea id="retro-slipped" class="textarea" rows="2" placeholder="Got stuck on vector DB dimensions; spent extra 40m debugging mock HTTP calls…"></textarea>
+          </div>
+          <div class="flex justify-between items-center pt-2">
+            <span id="retro-status" class="text-xs text-muted">Autosaved locally</span>
+            <button id="save-retro-btn" class="btn btn-primary btn-sm">Save Weekly Retro</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/shell.js"></script>
+  <script type="module" src="js/weekly-review.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+[
+  {
+    "id": "c01",
+    "skill": "Select AI tools and verify outputs",
+    "description": "Understand AI tool categories and compare their outputs.",
+    "weeks": [
+      1,
+      2
+    ],
+    "evidenceHint": "Link to your tool comparison doc or describe your decision process"
+  },
+  {
+    "id": "c02",
+    "skill": "Write and evaluate prompts",
+    "description": "Apply prompt engineering: few-shot, decomposition, iteration.",
+    "weeks": [
+      1,
+      2
+    ],
+    "evidenceHint": "Link to your prompt library (10+ prompts) or describe a successful prompt iteration"
+  },
+  {
+    "id": "c03",
+    "skill": "Understand LLM fundamentals and APIs",
+    "description": "Grasp tokens, context windows, generation settings.",
+    "weeks": [
+      3,
+      4
+    ],
+    "evidenceHint": "Link to your written explainer doc on tokens, context, embeddings"
+  },
+  {
+    "id": "c04",
+    "skill": "Build an LLM app with FastAPI and Streamlit",
+    "description": "Develop functional LLM apps with backend and frontend.",
+    "weeks": [
+      3,
+      4
+    ],
+    "evidenceHint": "Link to your GitHub repo with the Week 4 LLM app"
+  },
+  {
+    "id": "c05",
+    "skill": "Understand, debug and review AI-generated code",
+    "description": "Use AI workflows for coding and code comprehension.",
+    "weeks": [
+      5,
+      6
+    ],
+    "evidenceHint": "Describe a bug you found and fixed in AI-generated code, or link to a code review"
+  },
+  {
+    "id": "c06",
+    "skill": "Write automated tests",
+    "description": "Create test suites using pytest, HTTPX, and mocking.",
+    "weeks": [
+      7,
+      8
+    ],
+    "evidenceHint": "Link to a test suite you wrote (Week 7 or later, 10+ tests)"
+  },
+  {
+    "id": "c07",
+    "skill": "Build a RAG feature",
+    "description": "Implement chunking, embeddings, vector search, citations.",
+    "weeks": [
+      9
+    ],
+    "evidenceHint": "Link to your RAG endpoint with citations (Week 9)"
+  },
+  {
+    "id": "c08",
+    "skill": "Build an agent with approved tools and limits",
+    "description": "Develop an AI agent with 3+ tools.",
+    "weeks": [
+      10
+    ],
+    "evidenceHint": "Link to your agent repo with approved tools list"
+  },
+  {
+    "id": "c09",
+    "skill": "Understand MCP, state and orchestration",
+    "description": "Manage agent state, memory, and human approval gates.",
+    "weeks": [
+      11
+    ],
+    "evidenceHint": "Describe how MCP, state, and human approval work in your Week 11 project"
+  },
+  {
+    "id": "c10",
+    "skill": "Evaluate success, latency and cost",
+    "description": "Assess agent performance on 20-30 task datasets.",
+    "weeks": [
+      12
+    ],
+    "evidenceHint": "Link to your eval report with latency and cost metrics (Week 12)"
+  },
+  {
+    "id": "c11",
+    "skill": "Mitigate AI security risks",
+    "description": "Address prompt injection and apply least privilege.",
+    "weeks": [
+      13
+    ],
+    "evidenceHint": "Link to your threat model doc or describe mitigations you implemented"
+  },
+  {
+    "id": "c12",
+    "skill": "Use Docker and CI",
+    "description": "Containerize apps and use GitHub Actions CI.",
+    "weeks": [
+      14,
+      15
+    ],
+    "evidenceHint": "Link to your Dockerfile or GitHub Actions workflow"
+  },
+  {
+    "id": "c13",
+    "skill": "Explain architecture and trade-offs in an interview",
+    "description": "Communicate technical decisions and architecture.",
+    "weeks": [
+      16
+    ],
+    "evidenceHint": "Describe an architecture decision you could explain in an interview"
+  }
+]

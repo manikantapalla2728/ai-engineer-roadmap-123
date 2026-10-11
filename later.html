@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Later — AI Engineer Roadmap</title>
+  <link rel="stylesheet" href="styles/main.css?v=pro-flagship-v3">
+  <script src="data/bundle.js?v=pro-flagship-v3"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="nav" aria-label="Main navigation" style="display:none;"></nav>
+
+  <main id="main">
+    <div class="container page">
+      <header class="page-header">
+        <h1>Later</h1>
+        <p class="subtitle">Topics deferred until after the 16-week roadmap. Don't let these distract you now.</p>
+      </header>
+
+      <div class="later-note">
+        <strong>Already covered:</strong> You already know Data Analysis and ML — those are done. Data Engineering is next semester. Everything below is for <em>after</em> your 16 active weeks.
+      </div>
+
+      <div class="later-grid">
+        <div class="later-card">
+          <h3>🔧 Data Engineering</h3>
+          <p>Pipelines, Airflow, dbt, Spark, data lakes. Planned for next semester — your programme already covers this. Focus on it then, not now.</p>
+        </div>
+        <div class="later-card">
+          <h3>🧠 Fine-tuning &amp; RLHF</h3>
+          <p>LoRA, QLoRA, instruction tuning, RLHF/RLAIF. Requires GPU access and solid LLM fundamentals first. Revisit after Week 12.</p>
+        </div>
+        <div class="later-card">
+          <h3>🤗 Open-source Models</h3>
+          <p>Running Llama, Mistral, Phi locally via Ollama or vLLM. Interesting for cost savings. Relevant after you've built with API-hosted models first.</p>
+        </div>
+        <div class="later-card">
+          <h3>☁ Deeper Cloud Skills</h3>
+          <p>AWS Bedrock, GCP Vertex AI, Azure OpenAI. Managed model services, IAM, VPCs. Build on the Docker + CI foundation from Week 15.</p>
+        </div>
+        <div class="later-card">
+          <h3>📊 Advanced MLOps</h3>
+          <p>Feature stores, model registries (MLflow), A/B testing, drift detection. Relevant when you have a model in production with real traffic.</p>
+        </div>
+        <div class="later-card">
+          <h3>🧪 LLM Research Papers</h3>
+          <p>Attention mechanisms, transformers, scaling laws, RLHF papers. Great for interviews at research-focused companies — but not blocking for engineering roles.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/shell.js"></script>
+  <script type="module">
+    import { initTheme, initNav } from './js/app.js';
+    initTheme();
+    initNav('later');
+  </script>
+</body>
+</html>

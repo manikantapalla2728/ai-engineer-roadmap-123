@@ -1,0 +1,162 @@
+{
+  "name": "Personal AI Engineering Assistant",
+  "description": "A production-grade, extensible developer assistant built iteratively over 16 weeks — evolving from a basic LLM API wrapper to an autonomous, observability-instrumented, containerized cloud application.",
+  "safetyNote": "Start read-only. No arbitrary shell commands or access to secrets without explicit human approval. Every tool the agent calls must be pre-approved.",
+  "stages": [
+    {
+      "month": 1,
+      "title": "Core LLM API, Structured Output & Full-Stack UI",
+      "description": "Establish the foundational architecture: type-safe OpenAI/Anthropic SDK integrations, Pydantic structured output models, FastAPI backend endpoints, and interactive Streamlit frontend.",
+      "features": [
+        "Model client wrapper with exponential backoff and timeout handling",
+        "Type-safe Pydantic response models for zero-shot structured analysis",
+        "FastAPI service exposing /api/chat and /api/analyze endpoints",
+        "Streamlit chat interface with multi-turn conversation memory",
+        "Automated pytest test suite with mock API fixtures"
+      ],
+      "checklist": [
+        {
+          "id": "m1-readme",
+          "label": "README with local setup and architecture overview",
+          "category": "docs"
+        },
+        {
+          "id": "m1-tests",
+          "label": "3+ automated tests passing with zero network calls",
+          "category": "tests"
+        },
+        {
+          "id": "m1-pydantic",
+          "label": "Pydantic structured output schemas implemented and validated",
+          "category": "tests"
+        },
+        {
+          "id": "m1-security",
+          "label": "Environment variable isolation (.env.example, no hardcoded keys)",
+          "category": "security"
+        }
+      ]
+    },
+    {
+      "month": 2,
+      "title": "AI-Assisted Engineering, Comprehension & Code Review",
+      "description": "Transform the assistant into a developer co-pilot: repository topology analysis, code explanation engine, automated PR review assistance, and pre-commit security enforcement.",
+      "features": [
+        "Repository code explanation endpoint (/api/explain-code) with Mermaid diagrams",
+        "Automated Code Review helper evaluating diffs against security and performance rubrics",
+        "Semantic Git commit and pull request description generation tool",
+        "Pre-commit hook suite with ruff linting and detect-secrets scanning",
+        "Test suite expanded to 10+ comprehensive unit and integration tests"
+      ],
+      "checklist": [
+        {
+          "id": "m2-review",
+          "label": "Automated code review checklist and rubric implemented",
+          "category": "docs"
+        },
+        {
+          "id": "m2-tests",
+          "label": "10+ tests passing with > 80% code coverage",
+          "category": "tests"
+        },
+        {
+          "id": "m2-precommit",
+          "label": "Pre-commit hooks (ruff + secret detection) running on every commit",
+          "category": "security"
+        },
+        {
+          "id": "m2-diagrams",
+          "label": "Mermaid sequence and architecture diagrams documented in repo",
+          "category": "docs"
+        }
+      ]
+    },
+    {
+      "month": 3,
+      "title": "Production RAG, Tool-Calling Agent & Human Approval",
+      "description": "Advance to agentic engineering: document RAG with vector search and source citations, autonomous tool-calling execution loop with approved tools, and human-in-the-loop approval gates.",
+      "features": [
+        "Document ingestion and semantic chunking pipeline for PDFs and Markdown",
+        "Vector search engine (Chroma / Qdrant) with similarity filtering and grounding",
+        "Synthesized answers with clickable, verified source citations",
+        "Autonomous agent loop with JSON Schema tool calling and execution sandbox",
+        "Model Context Protocol (MCP) tool client integration",
+        "Human-in-the-loop approval gate for sensitive operations"
+      ],
+      "checklist": [
+        {
+          "id": "m3-rag",
+          "label": "RAG pipeline operational with strict refusal on out-of-domain queries",
+          "category": "evals"
+        },
+        {
+          "id": "m3-citations",
+          "label": "Responses output verifiable citation provenance for all claims",
+          "category": "tests"
+        },
+        {
+          "id": "m3-agent",
+          "label": "Autonomous tool calling agent with 3+ approved tools",
+          "category": "tests"
+        },
+        {
+          "id": "m3-approval",
+          "label": "Human approval gate successfully interrupts and resumes execution",
+          "category": "security"
+        },
+        {
+          "id": "m3-evals",
+          "label": "25-task offline benchmark dataset evaluated with metrics report",
+          "category": "evals"
+        }
+      ]
+    },
+    {
+      "month": 4,
+      "title": "AI Security Hardening, Observability & Cloud Deployment",
+      "description": "Production hardening and deployment: threat model mitigations against OWASP LLM vulnerabilities, structured JSON telemetry and fallbacks, multi-stage Docker build, and live cloud deployment.",
+      "features": [
+        "Prompt injection and indirect injection defense barriers with automated security tests",
+        "Least-privilege tool execution boundaries with path traversal prevention",
+        "Structured JSON logging with correlation trace IDs across all requests",
+        "Automated model fallback circuit breaker (e.g. Claude 3.5 -> GPT-4o on 5xx/429)",
+        "Rate limiting token bucket middleware and live metrics endpoint",
+        "Multi-stage Dockerfile and Docker Compose orchestration",
+        "GitHub Actions CI pipeline running lint, test, and security audit on every push",
+        "Public cloud deployment (Render / Fly.io / Railway) with live working URL"
+      ],
+      "checklist": [
+        {
+          "id": "m4-security",
+          "label": "THREAT_MODEL.md and automated security regression tests committed",
+          "category": "security"
+        },
+        {
+          "id": "m4-observability",
+          "label": "Structured logging with trace IDs and health endpoints live",
+          "category": "deployment"
+        },
+        {
+          "id": "m4-docker",
+          "label": "Multi-stage Dockerfile built and verified under 250MB",
+          "category": "deployment"
+        },
+        {
+          "id": "m4-ci",
+          "label": "GitHub Actions CI pipeline executing all tests green on push",
+          "category": "deployment"
+        },
+        {
+          "id": "m4-deploy",
+          "label": "Public production URL live with working full-stack demo",
+          "category": "deployment"
+        },
+        {
+          "id": "m4-demo",
+          "label": "2-minute asynchronous Loom/OBS demo video recorded and linked in README",
+          "category": "docs"
+        }
+      ]
+    }
+  ]
+}

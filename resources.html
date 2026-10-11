@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources — AI Engineer Roadmap</title>
+  <link rel="stylesheet" href="styles/main.css?v=pro-flagship-v3">
+  <script src="data/bundle.js?v=pro-flagship-v3"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="nav" aria-label="Main navigation" style="display:none;"></nav>
+
+  <main id="main">
+    <div class="container page">
+      <header class="page-header">
+        <h1>Resources Library</h1>
+        <p class="subtitle">Curated resources for each week. Green badge = link verified. Yellow = unverified (use search link).</p>
+      </header>
+
+      <div class="resources-controls" role="search" aria-label="Filter resources">
+        <input
+          type="search"
+          id="res-search"
+          class="input"
+          placeholder="Search resources…"
+          aria-label="Search resources"
+          autocomplete="off"
+        >
+        <select id="res-topic" class="select" aria-label="Filter by topic">
+          <option value="">All topics</option>
+        </select>
+        <select id="res-type" class="select" aria-label="Filter by type">
+          <option value="">All types</option>
+          <option value="docs">Docs</option>
+          <option value="video">Video</option>
+          <option value="course">Course</option>
+          <option value="article">Article</option>
+          <option value="tool">Tool</option>
+        </select>
+        <select id="res-level" class="select" aria-label="Filter by level">
+          <option value="">All levels</option>
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+        <select id="res-week" class="select" aria-label="Filter by week">
+          <option value="">All weeks</option>
+        </select>
+        <button id="res-clear" class="btn btn-ghost btn-sm">Clear</button>
+        <span id="res-count" class="text-sm text-muted" aria-live="polite"></span>
+      </div>
+
+      <div id="resources-grid" class="resources-grid" role="list" aria-label="Resources"></div>
+    </div>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/shell.js"></script>
+  <script type="module" src="js/resources.js"></script>
+</body>
+</html>

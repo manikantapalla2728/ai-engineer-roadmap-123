@@ -1,0 +1,770 @@
+[
+  {
+    "id": "r001",
+    "title": "OpenAI Platform Documentation",
+    "url": "https://platform.openai.com/docs/",
+    "type": "docs",
+    "topic": "AI Tools & Ecosystem",
+    "week": [
+      1
+    ],
+    "level": "beginner",
+    "author_or_channel": "OpenAI",
+    "why_it_helps": "Essential foundation for understanding model families, capabilities, and token rate limits.",
+    "verified": true,
+    "last_checked": "2026-10-11",
+    "search_query": ""
+  },
+  {
+    "id": "r002",
+    "title": "Anthropic Claude Documentation",
+    "url": "https://docs.anthropic.com/",
+    "type": "docs",
+    "topic": "AI Tools & Ecosystem",
+    "week": [
+      1
+    ],
+    "level": "beginner",
+    "author_or_channel": "Anthropic",
+    "why_it_helps": "Guides on Claude 3.5 Sonnet architecture, artifacts, and multi-modal vision capabilities.",
+    "verified": true,
+    "last_checked": "2026-10-11",
+    "search_query": ""
+  },
+  {
+    "id": "r003",
+    "title": "AI Coding Assistant Shootout & Comparison",
+    "url": "",
+    "type": "video",
+    "topic": "AI Tools & Ecosystem",
+    "week": [
+      1
+    ],
+    "level": "intermediate",
+    "author_or_channel": "YouTube",
+    "why_it_helps": "Video analysis comparing Cursor, GitHub Copilot, and Windsurf workflows.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "AI coding assistant comparison Cursor vs Copilot"
+  },
+  {
+    "id": "r004",
+    "title": "Anthropic Interactive Prompt Engineering Guide",
+    "url": "https://docs.anthropic.com/",
+    "type": "docs",
+    "topic": "Prompt Engineering",
+    "week": [
+      2
+    ],
+    "level": "intermediate",
+    "author_or_channel": "Anthropic",
+    "why_it_helps": "Best-in-class guide on XML tagging, few-shot examples, and chain-of-thought prompting.",
+    "verified": true,
+    "last_checked": "2026-10-11",
+    "search_query": ""
+  },
+  {
+    "id": "r005",
+    "title": "Learn Prompting Comprehensive Guide",
+    "url": "",
+    "type": "course",
+    "topic": "Prompt Engineering",
+    "week": [
+      2
+    ],
+    "level": "beginner",
+    "author_or_channel": "LearnPrompting.org",
+    "why_it_helps": "Comprehensive structured taxonomy of prompt patterns from zero-shot to direction stimulus.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "learn prompting free course prompt engineering guide"
+  },
+  {
+    "id": "r006",
+    "title": "Advanced Prompt Engineering Walkthrough",
+    "url": "",
+    "type": "video",
+    "topic": "Prompt Engineering",
+    "week": [
+      2
+    ],
+    "level": "intermediate",
+    "author_or_channel": "YouTube",
+    "why_it_helps": "Visual breakdowns of chain-of-thought, scratchpads, and prompt injection defense.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "advanced prompt engineering chain of thought tutorial"
+  },
+  {
+    "id": "r007",
+    "title": "Google AI for Developers Documentation",
+    "url": "https://ai.google.dev/docs",
+    "type": "docs",
+    "topic": "GenAI Fundamentals",
+    "week": [
+      3
+    ],
+    "level": "beginner",
+    "author_or_channel": "Google AI",
+    "why_it_helps": "Covers long-context windows (1M+ tokens), multimodal tokens, and generation settings.",
+    "verified": true,
+    "last_checked": "2026-10-11",
+    "search_query": ""
+  },
+  {
+    "id": "r008",
+    "title": "Tiktoken BPE Tokenizer Guide & Playground",
+    "url": "",
+    "type": "tool",
+    "topic": "GenAI Fundamentals",
+    "week": [
+      3
+    ],
+    "level": "intermediate",
+    "author_or_channel": "OpenAI",
+    "why_it_helps": "Hands-on understanding of how byte-pair encoding turns unicode strings into model tokens.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "OpenAI tiktoken tokenizer python tutorial"
+  },
+  {
+    "id": "r009",
+    "title": "Understanding Vector Embeddings Computationally",
+    "url": "",
+    "type": "article",
+    "topic": "GenAI Fundamentals",
+    "week": [
+      3
+    ],
+    "level": "intermediate",
+    "author_or_channel": "Jay Alammar",
+    "why_it_helps": "Renowned visual illustrated explanations of vector space and semantic embeddings.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "The Illustrated Word2vec Embeddings Jay Alammar"
+  },
+  {
+    "id": "r010",
+    "title": "FastAPI Official Documentation & Tutorial",
+    "url": "https://fastapi.tiangolo.com/",
+    "type": "docs",
+    "topic": "First LLM App",
+    "week": [
+      4
+    ],
+    "level": "beginner",
+    "author_or_channel": "Sebastián Ramírez",
+    "why_it_helps": "Standard web framework for AI APIs in Python, featuring async endpoints and automatic OpenAPI.",
+    "verified": true,
+    "last_checked": "2026-10-11",
+    "search_query": ""
+  },
+  {
+    "id": "r011",
+    "title": "Pydantic V2 Documentation",
+    "url": "https://docs.pydantic.dev/",
+    "type": "docs",
+    "topic": "First LLM App",
+    "week": [
+      4
+    ],
+    "level": "intermediate",
+    "author_or_channel": "Pydantic Team",
+    "why_it_helps": "Crucial for schema definition, runtime validation, and enforcing structured JSON outputs.",
+    "verified": true,
+    "last_checked": "2026-10-11",
+    "search_query": ""
+  },
+  {
+    "id": "r012",
+    "title": "Building Production FastAPI + Streamlit AI Apps",
+    "url": "",
+    "type": "video",
+    "topic": "First LLM App",
+    "week": [
+      4
+    ],
+    "level": "intermediate",
+    "author_or_channel": "YouTube",
+    "why_it_helps": "Step-by-step tutorial on building full-stack Python LLM apps connecting FastAPI to Streamlit.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "FastAPI Streamlit LLM application tutorial"
+  },
+  {
+    "id": "r013",
+    "title": "GitHub Copilot & Coding Agents Documentation",
+    "url": "https://docs.github.com/en/actions",
+    "type": "docs",
+    "topic": "Coding Agents",
+    "week": [
+      5
+    ],
+    "level": "intermediate",
+    "author_or_channel": "GitHub",
+    "why_it_helps": "Explains automated developer agent workflows, environment context, and CI integration.",
+    "verified": true,
+    "last_checked": "2026-10-11",
+    "search_query": ""
+  },
+  {
+    "id": "r014",
+    "title": "Effective AI Coding Agent Workflow Patterns",
+    "url": "",
+    "type": "article",
+    "topic": "Coding Agents",
+    "week": [
+      5
+    ],
+    "level": "intermediate",
+    "author_or_channel": "Engineering Blogs",
+    "why_it_helps": "Strategies for prompt-driven refactoring, context steering, and managing agent diffs.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "effective coding agent workflows cursor windsurf aider"
+  },
+  {
+    "id": "r015",
+    "title": "Coding Agents in Action: End-to-End Build",
+    "url": "",
+    "type": "video",
+    "topic": "Coding Agents",
+    "week": [
+      5
+    ],
+    "level": "intermediate",
+    "author_or_channel": "YouTube",
+    "why_it_helps": "Real-time walkthrough of refactoring a multi-file Python codebase using coding agents.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "coding agent full project build tutorial python"
+  },
+  {
+    "id": "r016",
+    "title": "Mermaid.js Official Diagramming Documentation",
+    "url": "",
+    "type": "docs",
+    "topic": "Code Comprehension",
+    "week": [
+      6
+    ],
+    "level": "beginner",
+    "author_or_channel": "Mermaid Team",
+    "why_it_helps": "Syntax guides for sequence, class, state, and flowcharts to visually document code.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "Mermaid js documentation sequence class diagram"
+  },
+  {
+    "id": "r017",
+    "title": "Reverse Engineering Legacy Codebases with AI",
+    "url": "",
+    "type": "article",
+    "topic": "Code Comprehension",
+    "week": [
+      6
+    ],
+    "level": "advanced",
+    "author_or_channel": "Martin Fowler / Refactoring",
+    "why_it_helps": "Patterns for understanding large, unfamiliar codebases using call graphs and ASTs.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "understanding legacy code with generative AI"
+  },
+  {
+    "id": "r018",
+    "title": "From Spaghetti Code to Architecture Blueprint",
+    "url": "",
+    "type": "video",
+    "topic": "Code Comprehension",
+    "week": [
+      6
+    ],
+    "level": "intermediate",
+    "author_or_channel": "YouTube",
+    "why_it_helps": "Watch an engineer dissect an unfamiliar repo with AI tools and synthesize clean PRDs.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "reverse engineering python codebase with AI tools"
+  },
+  {
+    "id": "r019",
+    "title": "pytest Official Documentation & Best Practices",
+    "url": "https://docs.pytest.org/en/stable/",
+    "type": "docs",
+    "topic": "Debugging & Testing",
+    "week": [
+      7
+    ],
+    "level": "intermediate",
+    "author_or_channel": "pytest dev team",
+    "why_it_helps": "Master fixtures, parametrizations, async testing, and exception assertion patterns.",
+    "verified": true,
+    "last_checked": "2026-10-11",
+    "search_query": ""
+  },
+  {
+    "id": "r020",
+    "title": "HTTPX Async Python HTTP Client Docs",
+    "url": "",
+    "type": "docs",
+    "topic": "Debugging & Testing",
+    "week": [
+      7
+    ],
+    "level": "intermediate",
+    "author_or_channel": "Encode OSS",
+    "why_it_helps": "Testing FastAPI endpoints asynchronously without blocking the event loop.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "HTTPX async client documentation python"
+  },
+  {
+    "id": "r021",
+    "title": "Mocking External APIs in Python with pytest",
+    "url": "",
+    "type": "video",
+    "topic": "Debugging & Testing",
+    "week": [
+      7
+    ],
+    "level": "intermediate",
+    "author_or_channel": "YouTube",
+    "why_it_helps": "Deep dive into mocking network calls to avoid paying token costs during test runs.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "pytest mock external API calls python tutorial"
+  },
+  {
+    "id": "r022",
+    "title": "Pre-Commit Framework Documentation",
+    "url": "",
+    "type": "tool",
+    "topic": "Code Review & Git",
+    "week": [
+      8
+    ],
+    "level": "beginner",
+    "author_or_channel": "Pre-commit Team",
+    "why_it_helps": "Automates multi-language pre-commit hooks to format code and scan for secrets before commit.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "pre-commit python hooks configuration tutorial"
+  },
+  {
+    "id": "r023",
+    "title": "Ruff Python Linter & Formatter",
+    "url": "",
+    "type": "tool",
+    "topic": "Code Review & Git",
+    "week": [
+      8
+    ],
+    "level": "beginner",
+    "author_or_channel": "Astral",
+    "why_it_helps": "Extremely fast Rust-based linter that replaces flake8, black, isort in production pipelines.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "astral ruff python linter formatter guide"
+  },
+  {
+    "id": "r024",
+    "title": "Secret Detection & Safe Git Workflows",
+    "url": "",
+    "type": "article",
+    "topic": "Code Review & Git",
+    "week": [
+      8
+    ],
+    "level": "intermediate",
+    "author_or_channel": "GitGuardian",
+    "why_it_helps": "How to prevent leaking API keys and handle credential rotation if compromised.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "prevent leaking secrets git gitleaks detect-secrets tutorial"
+  },
+  {
+    "id": "r025",
+    "title": "Chroma Vector Database Documentation",
+    "url": "",
+    "type": "docs",
+    "topic": "RAG Architecture",
+    "week": [
+      9
+    ],
+    "level": "intermediate",
+    "author_or_channel": "Chroma Core",
+    "why_it_helps": "Lightweight open-source vector database that runs embedded in Python apps.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "ChromaDB python documentation vector database tutorial"
+  },
+  {
+    "id": "r026",
+    "title": "Qdrant Vector Search Engine Documentation",
+    "url": "",
+    "type": "docs",
+    "topic": "RAG Architecture",
+    "week": [
+      9
+    ],
+    "level": "intermediate",
+    "author_or_channel": "Qdrant",
+    "why_it_helps": "Production-grade vector search engine with payload filtering and HNSW indexing.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "Qdrant vector search engine python tutorial"
+  },
+  {
+    "id": "r027",
+    "title": "RAG Chunking Strategies & Citation Grounding",
+    "url": "",
+    "type": "video",
+    "topic": "RAG Architecture",
+    "week": [
+      9
+    ],
+    "level": "advanced",
+    "author_or_channel": "YouTube",
+    "why_it_helps": "Explains semantic chunking, recursive splitters, and output citation mapping.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "advanced RAG chunking strategies citation grounding tutorial"
+  },
+  {
+    "id": "r028",
+    "title": "OpenAI Function Calling & Tool Guide",
+    "url": "https://platform.openai.com/docs/",
+    "type": "docs",
+    "topic": "Agent Fundamentals",
+    "week": [
+      10
+    ],
+    "level": "intermediate",
+    "author_or_channel": "OpenAI",
+    "why_it_helps": "Comprehensive guide on tool calling format, parallel tool execution, and JSON Schema.",
+    "verified": true,
+    "last_checked": "2026-10-11",
+    "search_query": ""
+  },
+  {
+    "id": "r029",
+    "title": "Building ReAct Agents from Scratch in Pure Python",
+    "url": "",
+    "type": "article",
+    "topic": "Agent Fundamentals",
+    "week": [
+      10
+    ],
+    "level": "advanced",
+    "author_or_channel": "Simon Willison",
+    "why_it_helps": "Illuminating walkthrough of building an agent loop without bloated framework abstractions.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "Simon Willison python ReAct pattern agent from scratch"
+  },
+  {
+    "id": "r030",
+    "title": "Autonomous Tool-Calling Agents Architecture",
+    "url": "",
+    "type": "video",
+    "topic": "Agent Fundamentals",
+    "week": [
+      10
+    ],
+    "level": "intermediate",
+    "author_or_channel": "YouTube",
+    "why_it_helps": "Visual breakdown of tool dispatching, execution sandboxing, and loop termination.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "building AI agents with tool calling python tutorial"
+  },
+  {
+    "id": "r031",
+    "title": "Model Context Protocol (MCP) Official Documentation",
+    "url": "https://modelcontextprotocol.io/",
+    "type": "docs",
+    "topic": "State & MCP",
+    "week": [
+      11
+    ],
+    "level": "intermediate",
+    "author_or_channel": "Anthropic / ModelContextProtocol",
+    "why_it_helps": "The open standard connecting AI models to external tools, local files, and enterprise data.",
+    "verified": true,
+    "last_checked": "2026-10-11",
+    "search_query": ""
+  },
+  {
+    "id": "r032",
+    "title": "Human-in-the-Loop Agent Workflows",
+    "url": "",
+    "type": "article",
+    "topic": "State & MCP",
+    "week": [
+      11
+    ],
+    "level": "advanced",
+    "author_or_channel": "LangChain / AI System Design",
+    "why_it_helps": "Patterns for interruptible execution, state pause, review gates, and deterministic resumption.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "human in the loop AI agent approval interruption workflows"
+  },
+  {
+    "id": "r033",
+    "title": "Model Context Protocol (MCP) Deep Dive",
+    "url": "",
+    "type": "video",
+    "topic": "State & MCP",
+    "week": [
+      11
+    ],
+    "level": "intermediate",
+    "author_or_channel": "YouTube",
+    "why_it_helps": "Architecture tutorial on writing custom MCP servers and clients in Python.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "Model Context Protocol MCP python tutorial architecture"
+  },
+  {
+    "id": "r034",
+    "title": "LLM Evaluation & Benchmarking Best Practices",
+    "url": "",
+    "type": "article",
+    "topic": "Agent Evaluation",
+    "week": [
+      12
+    ],
+    "level": "advanced",
+    "author_or_channel": "Hugging Face / Weights & Biases",
+    "why_it_helps": "Deep dive into building golden datasets, evaluating retrieval vs generation, and judging bias.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "evaluating LLM applications datasets benchmarks guide"
+  },
+  {
+    "id": "r035",
+    "title": "LLM-as-a-Judge Implementation & Calibration",
+    "url": "",
+    "type": "article",
+    "topic": "Agent Evaluation",
+    "week": [
+      12
+    ],
+    "level": "advanced",
+    "author_or_channel": "LMSYS Org",
+    "why_it_helps": "Research paper insights into position bias, verbosity bias, and grading calibration.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "LLM as a judge benchmark calibration LMSYS"
+  },
+  {
+    "id": "r036",
+    "title": "Building Offline Evaluation Suites for AI Agents",
+    "url": "",
+    "type": "video",
+    "topic": "Agent Evaluation",
+    "week": [
+      12
+    ],
+    "level": "intermediate",
+    "author_or_channel": "YouTube",
+    "why_it_helps": "Practical coding tutorial running a 30-task evaluation testbed measuring latency and cost.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "evaluating AI agents benchmark test suite python tutorial"
+  },
+  {
+    "id": "r037",
+    "title": "OWASP Top 10 for Large Language Model Applications",
+    "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+    "type": "docs",
+    "topic": "AI Security",
+    "week": [
+      13
+    ],
+    "level": "intermediate",
+    "author_or_channel": "OWASP Foundation",
+    "why_it_helps": "The definitive security authority on threat vectors for modern generative AI applications.",
+    "verified": true,
+    "last_checked": "2026-10-11",
+    "search_query": ""
+  },
+  {
+    "id": "r038",
+    "title": "Prompt Injection Mitigation Strategies",
+    "url": "",
+    "type": "article",
+    "topic": "AI Security",
+    "week": [
+      13
+    ],
+    "level": "advanced",
+    "author_or_channel": "NCC Group / Trail of Bits",
+    "why_it_helps": "Technical security research on prompt isolation, token boundaries, and defense-in-depth.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "prompt injection defenses security research trail of bits"
+  },
+  {
+    "id": "r039",
+    "title": "Red-Teaming Generative AI Applications",
+    "url": "",
+    "type": "video",
+    "topic": "AI Security",
+    "week": [
+      13
+    ],
+    "level": "intermediate",
+    "author_or_channel": "YouTube",
+    "why_it_helps": "Live demonstrations of prompt injection attacks, jailbreaks, and perimeter defense hardening.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "red teaming generative AI prompt injection live demo"
+  },
+  {
+    "id": "r040",
+    "title": "Structlog: Structured Logging for Python",
+    "url": "",
+    "type": "tool",
+    "topic": "Reliability & Observability",
+    "week": [
+      14
+    ],
+    "level": "intermediate",
+    "author_or_channel": "Structlog Team",
+    "why_it_helps": "Production library for generating structured JSON logs enriched with trace IDs.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "structlog python structured logging documentation tutorial"
+  },
+  {
+    "id": "r041",
+    "title": "Tenacity: Retrying Code in Python",
+    "url": "",
+    "type": "tool",
+    "topic": "Reliability & Observability",
+    "week": [
+      14
+    ],
+    "level": "beginner",
+    "author_or_channel": "Tenacity Team",
+    "why_it_helps": "General-purpose retrying library to handle transient API timeouts and rate limits.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "tenacity python retry library tutorial exponential backoff"
+  },
+  {
+    "id": "r042",
+    "title": "Resilient LLM Architectures in Production",
+    "url": "",
+    "type": "video",
+    "topic": "Reliability & Observability",
+    "week": [
+      14
+    ],
+    "level": "advanced",
+    "author_or_channel": "YouTube",
+    "why_it_helps": "Production patterns for handling token rate limits, failovers, and latency bottlenecks.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "building reliable resilient LLM applications production architecture"
+  },
+  {
+    "id": "r043",
+    "title": "Docker Official Documentation",
+    "url": "https://docs.docker.com/",
+    "type": "docs",
+    "topic": "Docker & Deployment",
+    "week": [
+      15
+    ],
+    "level": "beginner",
+    "author_or_channel": "Docker",
+    "why_it_helps": "Guide to building lightweight images, multi-stage compilation, and container orchestration.",
+    "verified": true,
+    "last_checked": "2026-10-11",
+    "search_query": ""
+  },
+  {
+    "id": "r044",
+    "title": "GitHub Actions Documentation",
+    "url": "https://docs.github.com/en/actions",
+    "type": "docs",
+    "topic": "Docker & Deployment",
+    "week": [
+      15
+    ],
+    "level": "beginner",
+    "author_or_channel": "GitHub",
+    "why_it_helps": "Complete guide for building automated CI/CD workflows, automated testing, and releases.",
+    "verified": true,
+    "last_checked": "2026-10-11",
+    "search_query": ""
+  },
+  {
+    "id": "r045",
+    "title": "Containerizing & Deploying Python AI Apps to Cloud",
+    "url": "",
+    "type": "video",
+    "topic": "Docker & Deployment",
+    "week": [
+      15
+    ],
+    "level": "intermediate",
+    "author_or_channel": "YouTube",
+    "why_it_helps": "Complete walkthrough deploying FastAPI + Streamlit containers onto Render / Fly.io.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "deploy fastapi streamlit docker container to render fly.io tutorial"
+  },
+  {
+    "id": "r046",
+    "title": "Crafting Outstanding GitHub Project Portfolios",
+    "url": "",
+    "type": "article",
+    "topic": "Portfolio & Interviews",
+    "week": [
+      16
+    ],
+    "level": "beginner",
+    "author_or_channel": "GitHub Readme Guide",
+    "why_it_helps": "How to structure technical project READMEs with diagrams, demo clips, and benchmarks.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "how to write a great technical github readme portfolio"
+  },
+  {
+    "id": "r047",
+    "title": "AI Engineer & AI Application Engineer Interview Guide",
+    "url": "",
+    "type": "article",
+    "topic": "Portfolio & Interviews",
+    "week": [
+      16
+    ],
+    "level": "advanced",
+    "author_or_channel": "Chip Huyen / Latent Space",
+    "why_it_helps": "In-depth insights into what engineering hiring managers look for in AI engineering candidates.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "AI engineer technical interview questions Chip Huyen"
+  },
+  {
+    "id": "r048",
+    "title": "Mock Technical Interview for AI Engineering Roles",
+    "url": "",
+    "type": "video",
+    "topic": "Portfolio & Interviews",
+    "week": [
+      16
+    ],
+    "level": "intermediate",
+    "author_or_channel": "YouTube",
+    "why_it_helps": "Watch a full 45-minute technical system design and live architecture interview breakdown.",
+    "verified": false,
+    "last_checked": null,
+    "search_query": "AI engineer mock technical interview system design"
+  }
+]

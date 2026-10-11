@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — AI Engineer Roadmap & Learning Hub</title>
+  <link rel="stylesheet" href="styles/main.css?v=pro-flagship-v3">
+  <link rel="manifest" href="manifest.json">
+  <script src="data/bundle.js?v=pro-flagship-v3"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="nav" aria-label="Main navigation" style="display:none;"></nav>
+
+  <main id="main">
+    <div class="container page" style="max-width: var(--content-max-width);">
+      
+      <!-- Hero Metric Bar -->
+      <section class="card mb-6 hero-metric-banner" style="padding: var(--space-4) var(--space-5);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--space-4); align-items: center;">
+          <div>
+            <div class="text-xs text-subtle fw-600 uppercase">Current Stage</div>
+            <div class="text-xl fw-700" id="hero-current-week">Week 1 · Day 1</div>
+          </div>
+          <div>
+            <div class="text-xs text-subtle fw-600 uppercase">Roadmap Progress</div>
+            <div class="flex items-center gap-2 mt-1">
+              <div class="text-xl fw-700" id="hero-pct">0%</div>
+              <div class="progress-track" style="flex:1; max-width:100px;">
+                <div class="progress-fill" id="hero-progress-fill" style="width: 0%;"></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="text-xs text-subtle fw-600 uppercase">Study Streak</div>
+            <div class="text-xl fw-700 flex items-center gap-1" id="hero-streak">
+              <svg class="icon icon-sm" style="color:var(--warning);"><use href="#icon-flame"></use></svg>
+              <span>0 Days</span>
+            </div>
+          </div>
+          <div>
+            <div class="text-xs text-subtle fw-600 uppercase">Completed Tasks</div>
+            <div class="text-xl fw-700" id="hero-completed-tasks">0 / 112</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Grid: Continue & Today Task -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-6); margin-bottom: var(--space-6);">
+        <!-- Continue Card -->
+        <section class="card flex flex-col justify-between" id="continue-card">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="badge badge-accent">Resume Learning</span>
+              <span class="text-xs text-muted" id="continue-time">Last active</span>
+            </div>
+            <h2 style="font-size: var(--text-lg); margin-bottom: var(--space-2);" id="continue-title">AI Tools & Assistants</h2>
+            <p class="text-sm text-muted mb-4" id="continue-desc">
+              Continue your structured 16-week journey into production agentic systems.
+            </p>
+          </div>
+          <div>
+            <a href="today.html" id="continue-link" class="btn btn-primary btn-sm">Jump into Today's Plan →</a>
+          </div>
+        </section>
+
+        <!-- Today Timeline Card (15/60/30/15) -->
+        <section class="card" id="today-routine-card">
+          <div class="flex justify-between items-center mb-2">
+            <span class="badge badge-neutral">Daily 2-Hour Routine</span>
+            <span class="text-xs text-accent fw-600">Strict Timers</span>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; text-align: center; margin: var(--space-3) 0 var(--space-4);">
+            <div class="card card-compact" style="background:var(--bg-subtle);">
+              <div class="text-xs fw-700">15m</div>
+              <div class="text-xs text-subtle">Learn</div>
+            </div>
+            <div class="card card-compact" style="background:var(--accent-subtle); border-color:var(--accent-border);">
+              <div class="text-xs fw-700 text-accent">60m</div>
+              <div class="text-xs text-accent">Build</div>
+            </div>
+            <div class="card card-compact" style="background:var(--bg-subtle);">
+              <div class="text-xs fw-700">30m</div>
+              <div class="text-xs text-subtle">Verify</div>
+            </div>
+            <div class="card card-compact" style="background:var(--bg-subtle);">
+              <div class="text-xs fw-700">15m</div>
+              <div class="text-xs text-subtle">Record</div>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-muted">Run session with automated timer:</span>
+            <a href="today.html#timer" class="btn btn-secondary btn-sm">Start Focus Timer</a>
+          </div>
+        </section>
+      </div>
+
+      <!-- 16-Week Phase Timeline -->
+      <section class="card mb-6">
+        <div class="flex justify-between items-center mb-3">
+          <h3>Full Preparation Timeline</h3>
+          <span class="text-xs text-muted">From Deep Learning to Active 16 Weeks</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-3);" id="phases-timeline">
+          <!-- Filled by home.js -->
+        </div>
+      </section>
+
+      <!-- Activity Heatmap -->
+      <section class="card mb-6">
+        <div class="flex justify-between items-center mb-3">
+          <h3>Study Activity Heatmap</h3>
+          <span class="text-xs text-muted">112 Days / 16 Active Weeks</span>
+        </div>
+        <div id="activity-heatmap-container" style="overflow-x: auto; padding-bottom: var(--space-2);">
+          <!-- SVG Heatmap rendered by home.js -->
+        </div>
+      </section>
+
+      <!-- Charts & Skill Map Section -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-6); margin-bottom: var(--space-6);">
+        <!-- Skill Distribution by Status -->
+        <section class="card">
+          <h3 class="mb-3">Mastery Status Distribution</h3>
+          <div id="skills-donut-container" class="flex justify-center items-center py-2">
+            <!-- SVG Donut Chart rendered by home.js -->
+          </div>
+        </section>
+
+        <!-- Milestones Tracker -->
+        <section class="card">
+          <h3 class="mb-3">Major Checkpoint Milestones</h3>
+          <div id="milestones-container" style="display: grid; gap: var(--space-2-5);">
+            <!-- Rendered by home.js -->
+          </div>
+        </section>
+      </div>
+
+      <!-- Interactive Skill Dependency Map -->
+      <section class="card mb-6">
+        <div class="flex justify-between items-center mb-3">
+          <div>
+            <h3>Skill Prerequisite Map</h3>
+            <p class="text-xs text-muted">Interactive visual dependency graph across Months 1-4. Click nodes to jump to guide.</p>
+          </div>
+        </div>
+        <div id="skill-map-container" style="overflow-x: auto; min-height: 280px; background: var(--bg-subtle); border-radius: var(--radius-sm); border: 1px solid var(--border);">
+          <!-- SVG Skill Dependency Graph rendered by home.js -->
+        </div>
+      </section>
+
+      <!-- Progress Backup Reminders Bar -->
+      <section class="card card-subtle flex justify-between items-center flex-wrap gap-3">
+        <div class="flex items-center gap-2">
+          <svg class="icon icon-sm text-accent"><use href="#icon-notes"></use></svg>
+          <span class="text-xs">All progress is preserved in your browser's LocalStorage. Back up regularly!</span>
+        </div>
+        <div class="flex gap-2">
+          <button id="dashboard-export-btn" class="btn btn-secondary btn-xs">Export Backup (JSON)</button>
+          <button id="dashboard-import-btn" class="btn btn-ghost btn-xs">Restore Backup</button>
+          <input type="file" id="dashboard-file-input" accept=".json" style="display:none;">
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/shell.js"></script>
+  <script type="module" src="js/home.js"></script>
+</body>
+</html>

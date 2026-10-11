@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authoritative Channels — AI Engineer Learning Hub</title>
+  <link rel="stylesheet" href="styles/main.css?v=pro-flagship-v3">
+  <script src="data/bundle.js?v=pro-flagship-v3"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="nav" aria-label="Main navigation" style="display:none;"></nav>
+
+  <main id="main">
+    <div class="container page">
+      <header class="page-header">
+        <h1>Authoritative Creators & Channels</h1>
+        <p class="subtitle">Curated directory of top technical teachers and official engineering teams across AI, systems programming, and full-stack software.</p>
+      </header>
+
+      <div id="channels-container" class="skills-grid" role="list">
+        <div class="empty-state"><div class="empty-icon">⏳</div><p>Loading channels…</p></div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/shell.js"></script>
+  <script type="module">
+    import { initTheme, initNav, fetchData, escapeHtml } from './js/app.js';
+    initTheme();
+    initNav('channels');
+
+    async function main() {
+      let channels = [];
+      try {
+        channels = await fetchData('data/channels.json');
+      } catch (err) {
+        document.getElementById('channels-container').innerHTML = '<p class="text-muted">Could not load channels data.</p>';
+        return;
+      }
+
+      document.getElementById('channels-container').innerHTML = channels.map(c => `
+        <div class="card flex flex-col justify-between" role="listitem">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 style="font-size:1.1rem; margin-bottom:0;">${escapeHtml(c.name)}</h3>
+              <a href="${escapeHtml(c.url)}" target="_blank" rel="noopener" class="btn btn-secondary btn-xs">Visit Channel ↗</a>
+            </div>
+            <div class="flex gap-1 flex-wrap mb-3">
+              ${(c.topics || []).map(t => `<span class="chip" style="font-size:0.7rem;">${escapeHtml(t)}</span>`).join('')}
+            </div>
+            <p class="text-xs text-muted mb-3" style="line-height:1.5;">${escapeHtml(c.why_recommended)}</p>
+          </div>
+          <div class="pt-2" style="border-top:1px solid var(--border);">
+            <strong class="text-xs text-subtle">Recommended Masterclasses:</strong>
+            <ul style="list-style:none; display:grid; gap:0.25rem; margin-top:0.35rem;" class="text-xs">
+              ${(c.top_picks || []).map(p => `<li>⭐ <span class="text-fg">${escapeHtml(p)}</span></li>`).join('')}
+            </ul>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    main();
+  </script>
+</body>
+</html>

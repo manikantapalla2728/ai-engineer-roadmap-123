@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stuck? — AI Engineer Debugging Protocol</title>
+  <link rel="stylesheet" href="styles/main.css?v=pro-flagship-v3">
+  <script src="data/bundle.js?v=pro-flagship-v3"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="nav" aria-label="Main navigation" style="display:none;"></nav>
+
+  <main id="main">
+    <div class="container page">
+      <header class="page-header">
+        <h1>What to Do When You Are Stuck</h1>
+        <p class="subtitle">A disciplined 5-step engineering escalation procedure. Never spend more than 30 minutes spinning in circles without escalating systematically.</p>
+      </header>
+
+      <!-- The 5-Step Escalation Protocol -->
+      <section class="card mb-6" style="border-left:4px solid var(--accent);">
+        <h2 class="mb-4">The 5-Step Escalation Ladder</h2>
+        
+        <div style="display:grid; gap:1.25rem;">
+          <div class="card card-sm" style="background:var(--surface-alt)">
+            <h3 class="text-sm fw-600 mb-1">Step 1: Reproduce Minimally (5-10 min)</h3>
+            <p class="text-xs text-muted mb-2">Strip away web servers, UI widgets, and external wrappers. Isolate the exact failing function into a standalone 10-line Python script or pytest case.</p>
+            <div class="text-xs"><strong>Litmus test:</strong> Can you trigger the error predictably with a single command: <code>python repro.py</code>?</div>
+          </div>
+
+          <div class="card card-sm" style="background:var(--surface-alt)">
+            <h3 class="text-sm fw-600 mb-1">Step 2: Read the Official Documentation (5 min)</h3>
+            <p class="text-xs text-muted mb-2">90% of AI library bugs stem from outdated syntax (e.g. OpenAI SDK v0.28 vs v1.0, Pydantic V1 vs V2, LangChain deprecations). Check the live official docs instead of ChatGPT training data from 2023.</p>
+            <div class="text-xs"><strong>Action:</strong> Open the exact method documentation from the <a href="resources.html" class="text-accent">Resources Library</a>.</div>
+          </div>
+
+          <div class="card card-sm" style="background:var(--surface-alt)">
+            <h3 class="text-sm fw-600 mb-1">Step 3: Targeted Search (5 min)</h3>
+            <p class="text-xs text-muted mb-2">Copy the exact innermost exception line from the traceback (strip file paths and memory addresses). Search GitHub Issues on the repository or Google.</p>
+            <div class="text-xs"><strong>Query format:</strong> <code>site:github.com/encode/httpx "ExactExceptionName" "FastAPI"</code></div>
+          </div>
+
+          <div class="card card-sm" style="background:var(--surface-alt)">
+            <h3 class="text-sm fw-600 mb-1">Step 4: Ask AI with a Structured Triage Prompt (5 min)</h3>
+            <p class="text-xs text-muted mb-2">Do not just type "fix this". Feed the error traceback, minimal repro script, and expected vs observed behavior using our Systematic Debugging prompt.</p>
+            <div class="text-xs">
+              <a href="prompts.html#prompt-p003" class="btn btn-secondary btn-xs mt-1">Copy "Debug Systematically" Prompt →</a>
+            </div>
+          </div>
+
+          <div class="card card-sm" style="background:var(--surface-alt)">
+            <h3 class="text-sm fw-600 mb-1">Step 5: Ask a Human / Community (When 30m Expires)</h3>
+            <p class="text-xs text-muted mb-2">If 30 minutes pass without resolution, write a clean question for StackOverflow, GitHub Discussions, or Discord. Include: (1) Goal, (2) Minimal code snippet, (3) Full traceback, (4) What you already tried.</p>
+            <div class="text-xs text-accent fw-600">Never get stuck alone for more than 45 minutes on a student project.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Prompt Launcher -->
+      <section class="card mb-6">
+        <h3 class="mb-3">🚀 Emergency Debugging Prompts</h3>
+        <p class="text-sm text-muted mb-4">Click copy to immediately paste into your LLM assistant:</p>
+        <div class="flex gap-2 flex-wrap">
+          <a href="prompts.html#prompt-p003" class="btn btn-secondary btn-sm">Copy: Systematic Debugging Prompt</a>
+          <a href="prompts.html#prompt-p002" class="btn btn-secondary btn-sm">Copy: Explain Generated Code</a>
+          <a href="prompts.html#prompt-p004" class="btn btn-secondary btn-sm">Copy: Agent Security Review</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/shell.js"></script>
+  <script type="module">
+    import { initTheme, initNav } from './js/app.js';
+    initTheme();
+    initNav('stuck');
+  </script>
+</body>
+</html>

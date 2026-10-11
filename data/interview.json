@@ -1,0 +1,523 @@
+[
+  {
+    "id": "iq001",
+    "topic": "LLMs",
+    "question": "What is a context window and why does it matter for production apps?",
+    "hints": [
+      "token limits",
+      "cost scaling",
+      "long documents",
+      "chunking"
+    ]
+  },
+  {
+    "id": "iq002",
+    "topic": "LLMs",
+    "question": "What are the core concepts and trade-offs of LLMs? (Variant 2)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq003",
+    "topic": "LLMs",
+    "question": "What are the core concepts and trade-offs of LLMs? (Variant 3)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq004",
+    "topic": "LLMs",
+    "question": "What are the core concepts and trade-offs of LLMs? (Variant 4)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq005",
+    "topic": "LLMs",
+    "question": "What are the core concepts and trade-offs of LLMs? (Variant 5)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq006",
+    "topic": "LLMs",
+    "question": "What are the core concepts and trade-offs of LLMs? (Variant 6)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq007",
+    "topic": "LLMs",
+    "question": "What are the core concepts and trade-offs of LLMs? (Variant 7)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq008",
+    "topic": "LLMs",
+    "question": "What are the core concepts and trade-offs of LLMs? (Variant 8)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq009",
+    "topic": "LLMs",
+    "question": "What are the core concepts and trade-offs of LLMs? (Variant 9)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq010",
+    "topic": "LLMs",
+    "question": "What are the core concepts and trade-offs of LLMs? (Variant 10)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq011",
+    "topic": "Prompting",
+    "question": "What are the core concepts and trade-offs of Prompting? (Variant 1)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq012",
+    "topic": "Prompting",
+    "question": "What are the core concepts and trade-offs of Prompting? (Variant 2)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq013",
+    "topic": "Prompting",
+    "question": "What are the core concepts and trade-offs of Prompting? (Variant 3)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq014",
+    "topic": "Prompting",
+    "question": "What are the core concepts and trade-offs of Prompting? (Variant 4)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq015",
+    "topic": "Prompting",
+    "question": "What are the core concepts and trade-offs of Prompting? (Variant 5)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq016",
+    "topic": "Prompting",
+    "question": "What are the core concepts and trade-offs of Prompting? (Variant 6)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq017",
+    "topic": "Prompting",
+    "question": "What are the core concepts and trade-offs of Prompting? (Variant 7)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq018",
+    "topic": "Prompting",
+    "question": "What are the core concepts and trade-offs of Prompting? (Variant 8)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq019",
+    "topic": "RAG",
+    "question": "What are the core concepts and trade-offs of RAG? (Variant 1)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq020",
+    "topic": "RAG",
+    "question": "What are the core concepts and trade-offs of RAG? (Variant 2)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq021",
+    "topic": "RAG",
+    "question": "What are the core concepts and trade-offs of RAG? (Variant 3)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq022",
+    "topic": "RAG",
+    "question": "What are the core concepts and trade-offs of RAG? (Variant 4)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq023",
+    "topic": "RAG",
+    "question": "What are the core concepts and trade-offs of RAG? (Variant 5)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq024",
+    "topic": "RAG",
+    "question": "What are the core concepts and trade-offs of RAG? (Variant 6)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq025",
+    "topic": "RAG",
+    "question": "What are the core concepts and trade-offs of RAG? (Variant 7)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq026",
+    "topic": "RAG",
+    "question": "What are the core concepts and trade-offs of RAG? (Variant 8)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq027",
+    "topic": "Agents",
+    "question": "What are the core concepts and trade-offs of Agents? (Variant 1)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq028",
+    "topic": "Agents",
+    "question": "What are the core concepts and trade-offs of Agents? (Variant 2)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq029",
+    "topic": "Agents",
+    "question": "What are the core concepts and trade-offs of Agents? (Variant 3)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq030",
+    "topic": "Agents",
+    "question": "What are the core concepts and trade-offs of Agents? (Variant 4)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq031",
+    "topic": "Agents",
+    "question": "What are the core concepts and trade-offs of Agents? (Variant 5)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq032",
+    "topic": "Agents",
+    "question": "What are the core concepts and trade-offs of Agents? (Variant 6)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq033",
+    "topic": "Agents",
+    "question": "What are the core concepts and trade-offs of Agents? (Variant 7)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq034",
+    "topic": "Agents",
+    "question": "What are the core concepts and trade-offs of Agents? (Variant 8)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq035",
+    "topic": "Testing",
+    "question": "What are the core concepts and trade-offs of Testing? (Variant 1)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq036",
+    "topic": "Testing",
+    "question": "What are the core concepts and trade-offs of Testing? (Variant 2)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq037",
+    "topic": "Testing",
+    "question": "What are the core concepts and trade-offs of Testing? (Variant 3)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq038",
+    "topic": "Testing",
+    "question": "What are the core concepts and trade-offs of Testing? (Variant 4)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq039",
+    "topic": "Testing",
+    "question": "What are the core concepts and trade-offs of Testing? (Variant 5)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq040",
+    "topic": "Testing",
+    "question": "What are the core concepts and trade-offs of Testing? (Variant 6)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq041",
+    "topic": "Security",
+    "question": "What are the core concepts and trade-offs of Security? (Variant 1)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq042",
+    "topic": "Security",
+    "question": "What are the core concepts and trade-offs of Security? (Variant 2)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq043",
+    "topic": "Security",
+    "question": "What are the core concepts and trade-offs of Security? (Variant 3)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq044",
+    "topic": "Security",
+    "question": "What are the core concepts and trade-offs of Security? (Variant 4)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq045",
+    "topic": "Security",
+    "question": "What are the core concepts and trade-offs of Security? (Variant 5)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq046",
+    "topic": "Security",
+    "question": "What are the core concepts and trade-offs of Security? (Variant 6)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq047",
+    "topic": "Deployment",
+    "question": "What are the core concepts and trade-offs of Deployment? (Variant 1)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq048",
+    "topic": "Deployment",
+    "question": "What are the core concepts and trade-offs of Deployment? (Variant 2)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq049",
+    "topic": "Deployment",
+    "question": "What are the core concepts and trade-offs of Deployment? (Variant 3)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq050",
+    "topic": "Deployment",
+    "question": "What are the core concepts and trade-offs of Deployment? (Variant 4)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq051",
+    "topic": "Deployment",
+    "question": "What are the core concepts and trade-offs of Deployment? (Variant 5)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  },
+  {
+    "id": "iq052",
+    "topic": "Deployment",
+    "question": "What are the core concepts and trade-offs of Deployment? (Variant 6)",
+    "hints": [
+      "Consider architectural impacts",
+      "Discuss practical edge cases",
+      "Mention specific tools or limits"
+    ]
+  }
+]

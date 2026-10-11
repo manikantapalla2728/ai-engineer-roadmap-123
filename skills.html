@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills Catalogue — AI Engineer Learning Hub</title>
+  <link rel="stylesheet" href="styles/main.css?v=pro-flagship-v3">
+  <script src="data/bundle.js?v=pro-flagship-v3"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="nav" aria-label="Main navigation" style="display:none;"></nav>
+
+  <main id="main">
+    <div class="container page">
+      <header class="page-header">
+        <h1>Skills Catalogue</h1>
+        <p class="subtitle">38 core competencies for AI Engineers, Application Engineers, and Agent Engineers. Filter by month, week, or mastery status.</p>
+      </header>
+
+      <!-- Spaced Repetition Reminders Banner -->
+      <div id="revision-alert" style="display:none;" class="revision-banner" role="alert">
+        <div>
+          <strong>🧠 Spaced Repetition Due:</strong>
+          <span id="revision-text" class="text-sm">You have skills scheduled for 1, 7, or 30-day recall review today!</span>
+        </div>
+        <a href="today.html#revisions" class="btn btn-secondary btn-sm">Review Now</a>
+      </div>
+
+      <!-- Filters & Search -->
+      <div class="resources-controls mb-6" role="search" aria-label="Filter skills">
+        <input
+          type="search"
+          id="skill-search"
+          class="input"
+          placeholder="Search skills, topics, tools…"
+          aria-label="Search skills"
+          autocomplete="off"
+        >
+        <select id="filter-month" class="select" aria-label="Filter by month">
+          <option value="">All Months</option>
+          <option value="1">Month 1: Tools & Prompting</option>
+          <option value="2">Month 2: Engineering & Tests</option>
+          <option value="3">Month 3: RAG & Agents</option>
+          <option value="4">Month 4: Production & Career</option>
+        </select>
+        <select id="filter-status" class="select" aria-label="Filter by status">
+          <option value="">All Statuses</option>
+          <option value="not-started">Not Started</option>
+          <option value="learning">Learning</option>
+          <option value="practising">Practising</option>
+          <option value="proven">Proven</option>
+        </select>
+        <button id="skills-clear" class="btn btn-ghost btn-sm">Clear</button>
+        <span id="skills-count" class="text-sm text-muted"></span>
+      </div>
+
+      <!-- Skills Cards Grid -->
+      <div id="skills-container" class="skills-grid" role="list" aria-label="Skills directory">
+        <div class="empty-state"><div class="empty-icon">⏳</div><p>Loading skills catalogue…</p></div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/shell.js"></script>
+  <script type="module" src="js/skills.js"></script>
+</body>
+</html>

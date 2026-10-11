@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice & Flashcards — AI Engineer Learning Hub</title>
+  <link rel="stylesheet" href="styles/main.css?v=pro-flagship-v3">
+  <style>
+    .flashcard-box {
+      perspective: 1000px;
+      min-height: 260px;
+    }
+    .flashcard-inner {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+      transition: border-color var(--duration-fast);
+    }
+    .flashcard-answer {
+      background: var(--bg-subtle);
+      border-left: 3px solid var(--accent);
+      padding: var(--space-4);
+      border-radius: var(--radius-sm);
+      margin-top: var(--space-4);
+    }
+  </style>
+  <script src="data/bundle.js?v=pro-flagship-v3"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="nav" aria-label="Main navigation" style="display:none;"></nav>
+
+  <main id="main">
+    <div class="container page" style="max-width: 900px;">
+      <header class="page-header">
+        <h1>Practice & Flashcards Studio</h1>
+        <p class="subtitle">Active recall test bench. Review core concepts, interview prompts, and proof-of-skill criteria using spaced repetition.</p>
+      </header>
+
+      <!-- Mode & Filter Toolbar -->
+      <div class="card card-compact mb-6 flex justify-between items-center flex-wrap gap-3">
+        <div class="flex gap-2 items-center flex-wrap">
+          <label for="practice-filter-topic" class="text-xs fw-600 text-muted">Topic Filter:</label>
+          <select id="practice-filter-topic" class="select" style="min-width: 180px;">
+            <option value="all">All Topics (38 Skills)</option>
+          </select>
+          <select id="practice-card-type" class="select">
+            <option value="interview">Interview Questions</option>
+            <option value="proof">Proof-of-Skill Criteria</option>
+          </select>
+        </div>
+
+        <div class="flex gap-2 items-center">
+          <span class="text-xs text-muted" id="practice-counter">Card 0 of 0</span>
+          <button id="practice-shuffle-btn" class="btn btn-secondary btn-xs" title="Shuffle deck">Shuffle</button>
+        </div>
+      </div>
+
+      <!-- Flashcard Deck Area -->
+      <div class="flashcard-box mb-6">
+        <div class="flashcard-inner" id="flashcard-card">
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <span class="badge badge-accent" id="card-skill-tag">Skill</span>
+              <span class="text-xs text-subtle" id="card-index-label">1 / 10</span>
+            </div>
+            <h3 class="text-lg fw-700 mb-2" id="card-prompt-text">Loading practice deck…</h3>
+            <p class="text-sm text-muted" id="card-sub-info"></p>
+          </div>
+
+          <div id="card-solution-area" style="display: none;">
+            <div class="flashcard-answer">
+              <div class="text-xs fw-700 text-muted uppercase tracking-wide mb-1">Model Outline / Criteria:</div>
+              <p class="text-sm" id="card-solution-text"></p>
+            </div>
+          </div>
+
+          <div class="mt-6 flex justify-between items-center flex-wrap gap-3" style="border-top: 1px solid var(--border); padding-top: var(--space-4);">
+            <button id="card-reveal-btn" class="btn btn-primary btn-sm">Show Answer / Model Outline</button>
+
+            <!-- Spaced repetition response rating buttons -->
+            <div id="card-rating-buttons" class="flex gap-2" style="display: none;">
+              <button class="btn btn-danger btn-xs rate-btn" data-rate="again">Again (1d)</button>
+              <button class="btn btn-warning btn-xs rate-btn" data-rate="hard">Hard (3d)</button>
+              <button class="btn btn-secondary btn-xs rate-btn" data-rate="good">Good (7d)</button>
+              <button class="btn btn-success btn-xs rate-btn" data-rate="easy">Easy (14d)</button>
+            </div>
+
+            <div class="flex gap-2">
+              <button id="card-prev-btn" class="btn btn-ghost btn-sm">Prev</button>
+              <button id="card-next-btn" class="btn btn-secondary btn-sm">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spaced Repetition Stats Card -->
+      <section class="card">
+        <h3 class="text-sm fw-700 mb-2">Memory Retention & Repetition Ledger</h3>
+        <p class="text-xs text-muted mb-3">Cards rated "Again" reappear next session, while "Good" or "Easy" extend the revision interval according to the SM-2 spaced repetition curve.</p>
+        <div class="flex gap-4 flex-wrap" id="retention-summary">
+          <div class="card card-compact" style="background:var(--bg-subtle); flex:1; min-width:140px;">
+            <div class="text-xs text-muted">Mastered (Easy/Good)</div>
+            <div class="text-lg fw-700 text-success mt-1" id="stat-mastered">0</div>
+          </div>
+          <div class="card card-compact" style="background:var(--bg-subtle); flex:1; min-width:140px;">
+            <div class="text-xs text-muted">Review Needed (Hard/Again)</div>
+            <div class="text-lg fw-700 text-danger mt-1" id="stat-review-needed">0</div>
+          </div>
+          <div class="card card-compact" style="background:var(--bg-subtle); flex:1; min-width:140px;">
+            <div class="text-xs text-muted">Total Active Cards</div>
+            <div class="text-lg fw-700 text-accent mt-1" id="stat-total-cards">0</div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/shell.js"></script>
+  <script type="module" src="js/practice.js"></script>
+</body>
+</html>

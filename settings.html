@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings & Data Management — AI Engineer Learning Hub</title>
+  <link rel="stylesheet" href="styles/main.css?v=pro-flagship-v3">
+  <script src="data/bundle.js?v=pro-flagship-v3"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="nav" aria-label="Main navigation" style="display:none;"></nav>
+
+  <main id="main">
+    <div class="container page" style="max-width: 800px;">
+      <header class="page-header">
+        <h1>Settings & Preferences</h1>
+        <p class="subtitle">Customize your study schedule parameters, theme preference, and export or restore your learning data.</p>
+      </header>
+
+      <!-- Section: Schedule Settings -->
+      <section class="card mb-6">
+        <h3 class="mb-3">Study Schedule Configuration</h3>
+        <div style="display: grid; gap: var(--space-4);">
+          <div>
+            <label for="settings-start-date" class="text-xs fw-600 text-muted">16-Week Active Study Start Date:</label>
+            <input type="date" id="settings-start-date" class="input mt-1" style="max-width: 240px;">
+            <p class="text-xs text-subtle mt-1">Shifting this start date recalculates your active week and day across the Dashboard and Today page.</p>
+          </div>
+          <div>
+            <label for="settings-daily-hours" class="text-xs fw-600 text-muted">Target Daily Study Allocation:</label>
+            <input type="number" id="settings-daily-hours" class="input mt-1" value="2" min="1" max="6" style="max-width: 140px;">
+            <p class="text-xs text-subtle mt-1">Default is 2 hours/day (~224 hours across 16 weeks).</p>
+          </div>
+          <div>
+            <button id="save-schedule-settings" class="btn btn-primary btn-sm">Save Schedule Settings</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Theme & Appearance -->
+      <section class="card mb-6">
+        <h3 class="mb-3">Appearance & Interface Theme</h3>
+        <div style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
+          <button class="btn btn-secondary btn-sm theme-choice-btn" data-theme="light">Light Theme</button>
+          <button class="btn btn-secondary btn-sm theme-choice-btn" data-theme="dark">Dark Theme</button>
+          <button class="btn btn-secondary btn-sm theme-choice-btn" data-theme="system">System Default</button>
+        </div>
+      </section>
+
+      <!-- Section: Data Storage, Export & Reset -->
+      <section class="card mb-6">
+        <h3 class="mb-3">Data Storage & Backup Management</h3>
+        <p class="text-xs text-muted mb-4">All your progress, task checkboxes, interview responses, and skill notes are kept locally on your machine in LocalStorage.</p>
+        
+        <div class="card card-compact mb-4 flex justify-between items-center" style="background:var(--bg-subtle);">
+          <div>
+            <div class="text-xs fw-600">LocalStorage Storage Footprint:</div>
+            <div class="text-sm fw-700 text-accent mt-0-5" id="storage-footprint">Calculating…</div>
+          </div>
+          <span class="badge badge-success">Local Privacy Safe</span>
+        </div>
+
+        <div class="flex gap-2 flex-wrap mb-4">
+          <button id="settings-export-btn" class="btn btn-primary btn-sm">Export All Progress (JSON)</button>
+          <button id="settings-import-btn" class="btn btn-secondary btn-sm">Import & Restore (JSON)</button>
+          <input type="file" id="settings-file-input" accept=".json" style="display: none;">
+        </div>
+
+        <div style="border-top: 1px solid var(--border); padding-top: var(--space-4);">
+          <h4 class="text-xs text-danger uppercase fw-700 mb-2">Danger Zone</h4>
+          <p class="text-xs text-muted mb-3">Reset all completed tasks, custom answers, and notes back to zero. This cannot be undone unless you have a backup export.</p>
+          <button id="settings-reset-btn" class="btn btn-danger btn-xs">Reset All Data</button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/shell.js"></script>
+  <script type="module" src="js/settings.js"></script>
+</body>
+</html>
